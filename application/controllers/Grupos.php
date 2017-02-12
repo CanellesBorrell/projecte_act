@@ -31,7 +31,7 @@ class Grupos extends CI_Controller {
 		}
 	}
 
-	public function index_front() {
+	public function index_front() {  // Vista que nos muestra como los usuarios ven los grupos
    		if($this->session->userdata('logged_in')){
 			$sesio = $this->session->userdata('logged_in');
 			$data = $this->modelo_grupos->getGrupo();
@@ -66,12 +66,22 @@ class Grupos extends CI_Controller {
 		}
 	}
 
-	public function eliminarGrupos($id) {
-		$this->modelo_grupos->eliminarGrupo($id);
-		redirect('Grupos/grupos');
+	public function actualizarGrupos($id) {
+		$sesio = $this->session->userdata('logged_in');
+			$data = $this->modelo_grupos->getAsignaturasGrupo($id);
+			
+			$dades = array(
+						'sesio' => $sesio,
+						'data' => $data);
+		$this->load->view('actualizar_grupos', $dades);
 	}
 
-	public function insertarGAsignaturas() {
+	public function eliminarGrupos($id) {
+		$this->modelo_grupos->eliminarGrupo($id);
+		redirect('grupos');
+	}
+
+	public function insertarGAsignaturas() {  // Ligamos una o varias asignaturas a un curso 
 		$id = $this->input->post('valor_id');
 		$asignatures = $this->input->post('g-asignaturas');
 		for ($i=0;$i<count($asignatures);$i++)    {         
@@ -82,8 +92,7 @@ class Grupos extends CI_Controller {
 	}
 
 
-	public function asignaturasCursadas($id) {
-		echo $id;
+	public function asignaturasCursadas($id) {  // Funcion que nos muestra las asignaturas atadas a un grupo en la vista de usuarios
 			$sesio = $this->session->userdata('logged_in');
 			$data = $this->modelo_grupos->getAsignaturasGrupo($id);
 			

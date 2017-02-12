@@ -36,12 +36,14 @@ class Modelo_grupos extends CI_Model{
     }
 
     function getAsignaturasGrupo($id) {
-        //SELECT id_asignatura FROM grupos_asignaturas where grupos_asignaturas.id_grupo=41
-        $this->db->select('a.id_asignatura, a.asignatura');
-        $this->db->from('asignaturas a');
-        $this->db->join('grupos_asignaturas g', 'a.id_asignatura = g.id_asignatura');
-        $this->db->where('id_grupo',$id);
+        $this->db->select('g.id_Grupos_Asignaturas, g.id_asignatura, g.id_grupo, a.asignatura ');
+        $this->db->from('grupos_asignaturas g');
+        $this->db->join('asignaturas a', 'g.id_asignatura = a.id_asignatura');
+        $this->db->where('g.id_grupo',$id);
         $query = $this->db->get();
         return $query->result_array(); 
     }
+
+
+
 }

@@ -292,27 +292,6 @@
                     <div id="page-content">
                         <!-- Quick Stats -->
 
-                        <div class="row text-center">
-                        <h2><?php echo validation_errors(); ?></h2>
-                            <div class="col-sm-6 col-lg-3">
-                                <a href="javascript:void(0)" onclick="$('#modal-insertar').modal('show');" class="widget widget-hover-effect2">
-                                    <div class="widget-extra themed-background-success">
-                                        <h4 class="widget-content-light"><strong>Añadir nuevo</strong> Grupo</h4>
-                                    </div>
-                                    <div class="widget-extra-full"><span class="h2 text-success animation-expandOpen"><i class="fa fa-plus"></i></span></div>
-                                </a>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <a href="javascript:void(0)" class="widget widget-hover-effect2">
-                                    <div class="widget-extra themed-background-danger">
-                                        <h4 class="widget-content-light"><strong>Numero de </strong> Grupos</h4>
-                                    </div>
-                                    <div class="widget-extra-full"><span class="h2 text-danger animation-expandOpen"><?php echo $this->db->count_all_results('Grupos'); ?></span></div>
-                                </a>
-                            </div>
-                             
-                           
-                        </div>
                         <!-- END Quick Stats -->
 
                         <!-- All Products Block -->
@@ -322,7 +301,7 @@
                                 <div class="block-options pull-right">
                                     <a href="javascript:void(0)" class="btn btn-alt btn-sm btn-default" data-toggle="tooltip" title="Settings"><i class="fa fa-cog"></i></a>
                                 </div>
-                                <h2><strong>Listado de</strong> Grupos</h2>
+                                <h2><strong>Listado de</strong> Assignaturas</h2>
                             </div>
                             <!-- END All Products Title -->
 
@@ -330,24 +309,16 @@
                             <table id="ecom-products" class="table table-bordered table-striped table-vcenter">
                                 <thead>
                                     <tr>
-                                        <th class="text-center" style="width: 70px;">ID</th>
-                                        <th>Clase</th>
-                                        <th class="text-right hidden-xs">Usuarios</th>
+                                        <th class="text-center" style="width: 70px;">Asignatura</th>
                                         <th class="text-center">Acción</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 <?php foreach($data as $listargrupos){ ?>
                                     <tr>
-                                        <td class="text-center"><strong><?php echo $listargrupos['id_grupo']; ?></strong></td>
-                                        <td><?php echo $listargrupos['Grupo']; ?></td>
-                                        <td class="hidden-xs">
-                                            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-angle-right"></i> Usuarios</button>
-                                        </td>
+                                        <td class="text-center"><strong><?php echo $listargrupos['asignatura']; ?></strong></td>
                                         <td class="text-center">
-                                           <a href="<?php echo base_url()?>index.php/grupos/actualizarGrupos/<?php echo $listargrupos['id_grupo']; ?>"><button class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i></button></a>
-                                           <button class="btn btn-sm btn-default" onclick="$('#modal-agrupar').modal('show'); editar(<?php echo $listargrupos['id_grupo']; ?>);"><i class="fa fa-wrench"></i></button>
-                                            <a href="<?php echo base_url()?>index.php/grupos/eliminarGrupos/<?php echo $listargrupos['id_grupo']; ?>"><button class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button></a>
+                                            <a href="<?php echo base_url()?>index.php/grupos/eliminarGrupos/<?php echo $listargrupos['id_Grupos_Asignaturas']; ?>"><button class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button></a>
                                         </td>
                                     </tr>
                                 <?php } // Cerramos foreach ?>  
