@@ -13,6 +13,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
        <?php include('imports.php'); ?>
+
+       <script type="text/javascript" language="javascript">
+            function editar(id) {
+             document.getElementById("valor_id").value = id;
+            }
+        </script>
     </head>
     <body>
         <!-- Page Wrapper -->
@@ -319,12 +325,9 @@
                                             <td class="text-center"><?php echo $listarusuarios['Apellidos']; ?></td>
                                             <td class="text-center"><?php echo $listarusuarios['Email']; ?></td>
                                             <td class="text-center">
-                                                <div class="btn-group">
-                                                    <a href="#" data-target="#modal-user-settings" onclick="selUsuario(''<?php echo $listarusuarios['id_usuario']; ?> ''<?php echo $listarusuarios['Nombre']; ?>''<?php echo $listarusuarios['Apellidos']; ?>''<?php echo $listarusuarios['Email']; ?>)" data-toggle="modal" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
-                                                    <a href="<?php echo base_url()?>index.php/Usuarios/eliminarUsuarios/<?php echo $listarusuarios['id_usuario']; ?>" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
-                                                </div>
+                                           <button onclick="$('#modal-user-settings').modal('show'); editar(<?php echo $listarusuarios['id_usuario']; ?>);" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i></button></a>
+                                            <a href="<?php echo base_url()?>index.php/Usuarios/eliminarUsuarios/<?php echo $listarusuarios['id_usuario']; ?>"><button class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button></a>
                                             </td>
-                                            <!--<td style="display:none"><?php $datos// = array('Nombre'=> $listarusuarios['Nombre'], 'Apellido' => $listarusuarios['Apellidos'], 'Email' => $listarusuarios['Email']);?></td> -->
                                         </tr>
                                         <?php } // Cerramos foreach ?>  
                                     </tbody>
@@ -369,7 +372,7 @@
                     <div class="modal-body">
                         <form action="modificarUsuario/<?php echo $listarusuarios['id_usuario'];?>" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered" onsubmit="return false;">
                         <!-- parametros ocultos -->
-                        <input type="hidden" id="id">
+                        <input type = "hidden" name = "valor_id" id="valor_id"/>
                             <fieldset>
                                 <legend>Información</legend>
                                 <div class="form-group">
