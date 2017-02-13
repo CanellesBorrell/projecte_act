@@ -25,19 +25,18 @@ class Principal extends CI_Controller {
 	 */
 	public function index()
 	{
-
-
 		if($this->session->userdata('logged_in')){
 			$sesio = $this->session->userdata('logged_in');
-			$data = null;//$this->modelo_grupos->getGrupo();
-				/*if($data == null) {
-					$this->load->view('grupos', $sesio);	
-				}*/
-		//else {
+			$data = null;
 					$dades = array(
 						'sesio' => $sesio,
 						'data' => $data);
-					$this->load->view('index', $dades);
+					if ($sesio['Primeravez'] == 1){
+						$this->load->view('primeravez', $dades);
+					} 
+					else{	
+						$this->load->view('index', $dades);
+					}
 				//}
 			}
 			

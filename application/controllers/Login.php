@@ -20,7 +20,6 @@ class Login extends CI_Controller {
 		}
 		else { // si ha anat be
 			//anirem a l'area privada
-			redirect('/asdasdindex', 'refresh');
 		}
 	}
 	
@@ -39,12 +38,11 @@ class Login extends CI_Controller {
 				'Apellidos' => $row->Apellidos, //Cognom de l'usuari
 				'id_rol' => $row->id_rol, //rol de l'usuari
 				'Email' => $row->Email, //email del usuari
-				'id_escuela' => $row->id_escuela // id de la escola
+				'id_escuela' => $row->id_escuela, // id de la escola
+				'Primeravez' => $row->Primeravez //Primera vez
 				);
-			$this->session->set_userdata('logged_in', $sess_array); // i de paso marquem com a que esta loguejat
-			}
-
-			
+			$this->session->set_userdata('logged_in', $sess_array); // i de paso marquem com a que esta loguejat 
+			}	
 			redirect('../', 'refresh');
 		return TRUE;
 		}

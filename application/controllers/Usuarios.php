@@ -7,8 +7,6 @@ class Usuarios extends CI_Controller {
       $this->load->library('form_validation');  // La llibreria per fer els camps requerits
       $this->load->model('modelo_usuarios');
       $this->load->helper('form');
-      
-      
     } 
 
 	
@@ -16,8 +14,6 @@ class Usuarios extends CI_Controller {
 		$sesiotemp = $this->session->userdata('logged_in');
 		if($this->session->userdata('logged_in')){
 			if($sesiotemp['id_rol']!=4){
-				
-			
 				$sesio = $this->session->userdata('logged_in');
 				$data = $this->modelo_usuarios->getUsuarios();
 				$dades = array(
@@ -36,11 +32,42 @@ class Usuarios extends CI_Controller {
 		else{
 				redirect('login', 'refresh');
 			}
-		
-		
-    	
 	}
-
+	/*
+	public function completaDades(){
+		$sesiotemp = $this->session->userdata('logged_in');
+		if($this->session->userdata('logged_in')){
+			if($sesiotemp['Primeravez']==1){
+				$this->form_validation->set_rules('Nombre', 'Nombre', 'required');
+				$this->form_validation->set_rules('Apellido', 'Apellido', 'required');
+				$this->form_validation->set_rules('Email', 'Email', 'required');
+				$this->form_validation->set_rules('Rol', 'Rol', 'required');
+				$this->form_validation->set_rules('Fecha', 'Fecha', 'required');
+				$this->form_validation->set_rules('Contraseña', 'Contraseña', 'required');
+				$this->form_validation->set_message('required', 'El campo %s es obligado');
+				
+				if($this->form_validation->run() == FALSE) {
+				$data = null;
+				$sesio = $this->session->userdata('logged_in');
+				$dades = array(
+						'sesio' => $sesio,
+						'data' => $data);
+				$this->load->view('primeravez', $dades);
+			}
+			else {
+				$nombre = $this->input->post('Nombre');
+				$apellido = $this->input->post('Apellido');
+				$email = $this->input->post('Email');
+				$rol = $this->input->post('Rol');
+				$fechanacimiento = $this->input->post('Fecha');
+				$contraseña = $this->input->post('Contraseña');
+				$contador = $this->input->post('contador'); 
+				$this->modelo_usuarios->insertarUsuario($nombre, $apellido, $email,$rol ,$fechanacimiento, $contraseña);
+				redirect('usuarios');
+			}
+			}
+		}
+	}*/
 	public function insertarUsuario() {
 		$sesiotemp = $this->session->userdata('logged_in');
 		if($this->session->userdata('logged_in')){
@@ -49,11 +76,7 @@ class Usuarios extends CI_Controller {
 		//{
 			
 			if($sesiotemp['id_rol']!=4){
-				
-			
-			
 			//podra fer els inserts
-			
 			$this->form_validation->set_rules('Nombre', 'Nombre', 'required');
 			$this->form_validation->set_rules('Apellido', 'Apellido', 'required');
 			$this->form_validation->set_rules('Email', 'Email', 'required');

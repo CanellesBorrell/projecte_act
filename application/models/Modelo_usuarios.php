@@ -24,6 +24,21 @@ class Modelo_usuarios extends CI_Model{
         $query = $this->db->get();
         return $query->result_array();
     }
+    /*
+    function completarDades(){
+		
+		function modificarUsuario($id, $nombre, $apellidos, $email, $password) {
+            $data=array(
+                'Nombre'=> $nombre,
+                'Apellidos'=> $apellidos,
+                'Email'=> $email,
+                'Contraseña'=> $password);
+
+            $this->db->where('id_usuario', $id);
+            $this->db->update('Usuarios', $data);
+    }
+		
+	}*/
 
 
     
@@ -34,6 +49,7 @@ class Modelo_usuarios extends CI_Model{
         $this -> db -> select('id_rol');
         $this -> db -> select('Email');
         $this -> db -> select('id_escuela');
+        $this -> db -> select('Primeravez');
         $this -> db -> from('Usuarios');
         $this -> db -> where('Email', $email);
         $this -> db -> where('Contraseña', MD5($password)); 

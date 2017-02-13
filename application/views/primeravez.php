@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>ProUI - Responsive Bootstrap Admin Template</title>
+        <title>ProUI - asdasdasda Bootstrap Admin Template</title>
 
         <meta name="description" content="ProUI is a Responsive Bootstrap Admin Template created by pixelcave and published on Themeforest.">
         <meta name="author" content="pixelcave">
@@ -62,7 +62,7 @@
             <div class="block push-bit">
                 <!-- Login Form -->
                 <?php echo validation_errors(); ?>
-                <?php echo form_open('Login', 'class="form-horizontal form-bordered form-control-borderless"'); ?>
+				<?php echo form_open('Login', 'class="form-horizontal form-bordered form-control-borderless"'); ?>
                     <div class="form-group">
                         <div class="col-xs-12">
                             <div class="input-group">
