@@ -324,7 +324,6 @@
                                     <tr>
                                         <th class="text-center" style="width: 70px;">ID</th>
                                         <th class="text-center" >Nombre</th>
-                                        <th class="text-right hidden-xs">Usuarios</th>
                                         <th class="text-center">Acción</th>
                                     </tr>
                                 </thead>
@@ -333,13 +332,10 @@
                                     <tr>
                                         <td class="text-center"><strong><?php echo $listarasignaturas['id_asignatura']; ?></strong></td>
                                         <td class="text-center"><?php echo $listarasignaturas['Asignatura']; ?></td>
-                                        <td class="hidden-xs">
-                                            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-angle-right"></i> Usuarios</button>
-                                        </td>
                                         <td class="text-center">
-                                            <button onclick="$('#modal-user-settings').modal('show');" data-toggle="tooltip" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i></button>
+                                            <a href="<?php echo base_url()?>index.php/asignaturas/actualizarAsignatura/<?php echo $listarasignaturas['id_asignatura']; ?>"><button class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i></button></a>
                                             <button class="btn btn-sm btn-default" onclick="$('#modal-agrupar').modal('show'); editar(<?php echo $listarasignaturas['id_asignatura']; ?>);"><i class="fa fa-wrench"></i></button>
-                                            <button class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button>
+                                            <a href="<?php echo base_url()?>index.php/asignaturas/eliminarAsignaturas/<?php echo $listarasignaturas['id_asignatura']; ?>"><button class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button></a>
                                         </td>
                                     </tr>
                                 <?php } // Cerramos foreach ?>  

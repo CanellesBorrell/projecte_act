@@ -337,6 +337,20 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="form-group">
+                                                <div class="form-group">
+                                                <label class="col-md-4 control-label" for="example-chosen">Selecciona el rol<span class="text-danger">*</span></label>
+                                                <div class="col-md-6">
+                                                    <select id="Rol" name="Rol" class="select-chosen" data-placeholder="Elige un rol" style="width: 250px;">
+                                                        <option></option><!-- Required for data-placeholder attribute to work with Chosen plugin -->
+                                                        <option value="1">Administrador</option>
+                                                        <option value="2">Director</option>
+                                                        <option value="3">Profesor</option>
+                                                        <option value="4">Alumno</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            </div>
                                              <div class="form-group">
                                                 <label class="col-md-4 control-label" for="contador">Rango [1, 1000] <span class="text-danger">*</span></label>
                                                 <div class="col-md-6">
@@ -414,7 +428,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <div class="form-group">
-                                                <label class="col-md-4 control-label" for="example-chosen">Selecciona el rol</label>
+                                                <label class="col-md-4 control-label" for="example-chosen">Selecciona el rol<span class="text-danger">*</span></label>
                                                 <div class="col-md-6">
                                                     <select id="Rol" name="Rol" class="select-chosen" data-placeholder="Elige un rol" style="width: 250px;">
                                                         <option></option><!-- Required for data-placeholder attribute to work with Chosen plugin -->
@@ -427,7 +441,7 @@
                                             </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-md-4 control-label" for="example-city">Fecha de nacimiento</label>
+                                                <label class="col-md-4 control-label" for="example-city">Fecha de nacimiento<span class="text-danger">*</span></label>
                                                 <div class="col-md-8">
                                                      <input type="text" id="Fecha" name="Fecha" class="form-control input-datepicker" data-date-format="yyyy-mm-dd" placeholder="yyyy-mm-dd">
                                                 </div>

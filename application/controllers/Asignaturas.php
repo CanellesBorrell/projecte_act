@@ -55,6 +55,16 @@ class Asignaturas extends CI_Controller {
 		redirect('Asignaturas/asignaturas');
 	}
 
+	 public function actualizarAsignatura($id) {
+		$sesio = $this->session->userdata('logged_in');
+			$data = $this->modelo_asignaturas->getUsuariosAsignatura($id);
+			
+			$dades = array(
+						'sesio' => $sesio,
+						'data' => $data);
+		$this->load->view('actualizar_asignaturas', $dades);
+	}
+
 	public function insertarAAsigntauras() {
 		$id = $this->input->post('valor_id');
 		$alumnos = $this->input->post('a-alumnos');
@@ -63,4 +73,6 @@ class Asignaturas extends CI_Controller {
 		} 
 		redirect('asignaturas');
 	}
+
+
 }

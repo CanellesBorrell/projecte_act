@@ -12,7 +12,7 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-       <?php include('imports.php'); ?>
+        <?php include('imports.php');?>
     </head>
     <body>
         <!-- Page Wrapper -->
@@ -247,8 +247,11 @@
                 </div>
                 <!-- END Alternative Sidebar -->
 
-                <?php include('menu.php'); ?>
+                <!-- Main Sidebar -->
                 
+                            <?php include('menu.php');?>
+                           
+
                 <!-- Main Container -->
                 <div id="main-container">
                     <!-- Header -->
@@ -265,7 +268,7 @@
                         'navbar-fixed-bottom'       for a bottom fixed header (fixed sidebars with scroll will be auto initialized, functionality can be found in js/app.js - handleSidebar()))
                             'header-fixed-bottom'   has to be added on #page-container only if the class 'navbar-fixed-bottom' was added
                     -->
-                      <header class="navbar navbar-default">
+                    <header class="navbar navbar-default">
                         <!-- Left Header Navigation -->
                         <ul class="nav navbar-nav-custom">
                             <!-- Main Sidebar Toggle Button -->
@@ -281,57 +284,48 @@
 
                     <!-- Page content -->
                     <div id="page-content">
-                        <!-- Datatables Header -->
-                        <div class="content-header">
-                            <div class="header-section">
-                                <h1>
-                                    <i class="fa fa-table"></i>Listado de Usuarios<br><small></small>
-                                </h1>
-                            </div>
-                        </div>
-                        <ul class="breadcrumb breadcrumb-top">
-                            <li>Tables</li>
-                            <li><a href="">Lista de Usuarios</a></li>
-                        </ul>
-                        <!-- END Datatables Header -->
+                        <!-- Quick Stats -->
+                       
+                        <!-- END Quick Stats -->
 
-                        <!-- Datatables Content -->
+                        <!-- All Products Block -->
                         <div class="block full">
+                            <!-- All Products Title -->
                             <div class="block-title">
-                                <h2><strong>Listado de </strong> Usuario</h2>
+                                <div class="block-options pull-right">
+                                    <a href="javascript:void(0)" class="btn btn-alt btn-sm btn-default" data-toggle="tooltip" title="Settings"><i class="fa fa-cog"></i></a>
+                                </div>
+                                <h2><strong>Asignaturas</strong></h2>
                             </div>
-                            
+                            <!-- END All Products Title -->
 
-                            <div class="table-responsive">
-                                <table id="example-datatable" class="table table-vcenter table-condensed table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th class="text-center">Nombre</th>
-                                            <th>Apellidos</th>
-                                            <th class="text-center"><i class="gi gi-user"></i></th>
-                                            <th class="text-center">Actions</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    <?php foreach($data as $listarusuarios){ ?>
-                                        <tr>
-                                            <td class="text-center"><?php echo $listarusuarios['Nombre']; ?></td>
-                                            <td class="text-center"><?php echo $listarusuarios['Apellidos']; ?></td>
-                                            <td class="text-center"><?php echo $listarusuarios['Email']; ?></td>
-                                            <td class="text-center">
-                                                <div class="btn-group">
-                                                    <a href="#" data-target="#modal-user-settings" onclick="selUsuario(''<?php echo $listarusuarios['id_usuario']; ?> ''<?php echo $listarusuarios['Nombre']; ?>''<?php echo $listarusuarios['Apellidos']; ?>''<?php echo $listarusuarios['Email']; ?>)" data-toggle="modal" title="Edit" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i></a>
-                                                    <a href="<?php echo base_url()?>index.php/Usuarios/eliminarUsuarios/<?php echo $listarusuarios['id_usuario']; ?>" data-toggle="tooltip" title="Delete" class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
-                                                </div>
-                                            </td>
-                                            <!--<td style="display:none"><?php $datos// = array('Nombre'=> $listarusuarios['Nombre'], 'Apellido' => $listarusuarios['Apellidos'], 'Email' => $listarusuarios['Email']);?></td> -->
-                                        </tr>
-                                        <?php } // Cerramos foreach ?>  
-                                    </tbody>
-                                </table>
-                            </div>
+                            <!-- All Products Content -->
+                            <table id="ecom-products" class="table table-bordered table-striped table-vcenter">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center" style="width: 70px;">ID</th>
+                                        <th class="text-center" >Nombre</th>
+                                        <th class="text-center">Acción</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <?php foreach($data as $listarusuarios){ ?>
+                                    <tr>
+                                        <td class="text-center"><strong><?php echo $listarusuarios['id_Usuarios_Asignaturas']; ?></strong></td>
+                                        <td class="text-center"><?php echo $listarusuarios['Email']; ?></td>
+                                       
+                                        <td class="text-center">
+                                            <button onclick="$('#modal-user-settings').modal('show');" data-toggle="tooltip" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-sm btn-default" onclick="$('#modal-agrupar').modal('show'); editar(<?php echo $listarusuarios['id_asignatura']; ?>);"><i class="fa fa-wrench"></i></button>
+                                            <button class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button>
+                                        </td>
+                                    </tr>
+                                <?php } // Cerramos foreach ?>  
+                                </tbody>
+                            </table>
+                            <!-- END All Products Content -->
                         </div>
-                        <!-- END Datatables Content -->
+                        <!-- END All Products Block -->
                     </div>
                     <!-- END Page Content -->
 
@@ -361,67 +355,49 @@
                 <div class="modal-content">
                     <!-- Modal Header -->
                     <div class="modal-header text-center">
-                        <h2 class="modal-title"><i class="fa fa-pencil"></i> Actualizar</h2>
+                        <h2 class="modal-title"><i class="fa fa-pencil"></i> Settings</h2>
                     </div>
                     <!-- END Modal Header -->
 
                     <!-- Modal Body -->
                     <div class="modal-body">
-                        <form action="modificarUsuario/<?php echo $listarusuarios['id_usuario'];?>" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered" onsubmit="return false;">
-                        <!-- parametros ocultos -->
-                        <input type="hidden" id="id">
+                        <form action="index.html" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered" onsubmit="return false;">
                             <fieldset>
-                                <legend>Información</legend>
+                                <legend>Vital Info</legend>
                                 <div class="form-group">
-                                    <label class="col-md-4 control-label" for="user-settings-email">Nombre</label>
+                                    <label class="col-md-4 control-label">Username</label>
                                     <div class="col-md-8">
-                                        <input type="text" id="Nombre" name="Nombre" class="form-control" value="">
+                                        <p class="form-control-static">Admin</p>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-4 control-label" for="user-settings-email">Apellidos</label>
+                                    <label class="col-md-4 control-label" for="user-settings-email">Email</label>
                                     <div class="col-md-8">
-                                        <input type="text" id="Apellidos" name="Apellidos" class="form-control" value="">
+                                        <input type="email" id="user-settings-email" name="user-settings-email" class="form-control" value="admin@example.com">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-4 control-label" for="user-settings-email">Correo</label>
+                                    <label class="col-md-4 control-label" for="user-settings-notifications">Email Notifications</label>
                                     <div class="col-md-8">
-                                        <input type="email" id="Email" name="Email" class="form-control" value="">
+                                        <label class="switch switch-primary">
+                                            <input type="checkbox" id="user-settings-notifications" name="user-settings-notifications" value="1" checked>
+                                            <span></span>
+                                        </label>
                                     </div>
                                 </div>
                             </fieldset>
                             <fieldset>
-                                <legend>Actualizar contraseña</legend>
+                                <legend>Password Update</legend>
                                 <div class="form-group">
-                                    <label class="col-md-4 control-label" for="user-settings-password">Nueva contraseña</label>
+                                    <label class="col-md-4 control-label" for="user-settings-password">New Password</label>
                                     <div class="col-md-8">
-                                        <input type="password" id="contraseña" name="contraseña" class="form-control" placeholder="Please choose a complex one..">
+                                        <input type="password" id="user-settings-password" name="user-settings-password" class="form-control" placeholder="Please choose a complex one..">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-4 control-label" for="user-settings-repassword">Confirmar nueva contraseña</label>
+                                    <label class="col-md-4 control-label" for="user-settings-repassword">Confirm New Password</label>
                                     <div class="col-md-8">
-                                        <input type="password" id="confirmarcontraseña" name="confirmarcontraseña" class="form-control" placeholder="..and confirm it!">
-                                    </div>
-                                </div>
-                            </fieldset>
-                            <fieldset>
-                                <legend>Información de la escuela</legend>
-                               <div class="form-group">
-                                    <label class="col-md-4 control-label" for="example-chosen-multiple">Selecciona un curso</label>
-                                    <div class="col-md-6">
-                                        <select id="example-chosen-multiple" name="example-chosen-multiple" class="select-chosen" data-placeholder="Choose a Country.." style="width: 250px;" multiple>
-                                            <option value="United States">United States</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-4 control-label" for="example-chosen-multiple">Selecciona asignaturas</label>
-                                    <div class="col-md-6">
-                                        <select id="example-chosen-multiple" name="example-chosen-multiple" class="select-chosen" data-placeholder="Choose a Country.." style="width: 250px;" multiple>
-                                            <option value="United States">United States</option>
-                                        </select>
+                                        <input type="password" id="user-settings-repassword" name="user-settings-repassword" class="form-control" placeholder="..and confirm it!">
                                     </div>
                                 </div>
                             </fieldset>
@@ -434,23 +410,101 @@
                         </form>
                     </div>
                     <!-- END Modal Body -->
+
+                    
                 </div>
             </div>
         </div>
         <!-- END User Settings -->
 
+        <!-- Modal para insertar datos  -->
+       <div id="modal-insertar" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header text-center">
+                        <h2 class="modal-title"><i class="fa fa-pencil"></i> Crear Asignatura</h2>
+                    </div>
+                    <!-- END Modal Header -->
 
-        <!-- Load and execute javascript code used only in this page -->
-        <script src="js/pages/tablesDatatables.js"></script>
-        <script>$(function(){ TablesDatatables.init(); });</script>
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <form action="asignaturas/insertarAsignaturas" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered">
+                            <fieldset>
+                                <legend></legend>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="Asignatura">Asignatura<span class="text-danger">*</span></label>
+                                        <div class="col-md-6">
+                                            <div class="input-group">
+                                                <input type="text" id="Asignatura" name="Asignatura" class="form-control" placeholder="Introduce una asignatura">
+                                                
+                                            </div>
+                                        </div>
+                                </div>
+                            </fieldset>
+                            <div class="form-group form-actions">
+                                <div class="col-xs-12 text-right">
+                                    <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Cancelar</button>
+                                    <button type="submit" class="btn btn-sm btn-primary">Aceptar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- END Modal Body -->
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <!-- END del Modal para insertar -->
+         <div id="modal-agrupar" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header text-center">
+                        <h2 class="modal-title"><i class="fa fa-pencil"></i>Insertar alumnos</h2>
+                    </div>
+                    <!-- END Modal Header -->
 
-        <script type="text/javascript">
-            selUsuario = function(id, nombre, apellidos, email){
-                $('#id').val(id);
-                $('#Nombre').val(nombre);
-                $('#Apellidos').val(apellidos);
-                $('#Email').val(email);
-            };
-        </script>
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <form action="asignaturas/insertarAAsigntauras" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered">
+                            <fieldset>
+                                <div class="form-group">
+                                                <input type = "hidden" name = "valor_id" id="valor_id"/>
+                                                <label class="col-md-4 control-label" for="a-alumnos">Insertar alumnos</label>
+                                                <div class="col-md-6">
+                                                    <select id="a-alumnos" name="a-alumnos[]" class="select-chosen" data-placeholder="Selecciona los usuarios" style="width: 250px;" multiple>
+                                                    <?php foreach($usuario as $llistarusuarios){ ?>
+                                                        <option value="<?php echo $llistarusuarios['id_usuario']; ?>"><?php echo $llistarusuarios['Nombre']; ?> <?php echo $llistarusuarios['Apellidos']; ?></option>
+
+                                                   <?php } ?>
+                                                        
+                                                    </select>
+                                                </div>
+                                            </div>
+                            </fieldset>
+                            <div class="form-group form-actions">
+                                <div class="col-xs-12 text-right">
+                                    <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Cancelar</button>
+                                    <button type="submit" class="btn btn-sm btn-primary">Aceptar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- END Modal Body -->
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+       
     </body>
+
+    <script type="text/javascript" language="javascript">
+            function editar(id) {
+             document.getElementById("valor_id").value = id;
+            }
+        </script>
 </html>

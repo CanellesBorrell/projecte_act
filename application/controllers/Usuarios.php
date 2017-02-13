@@ -120,11 +120,12 @@ public function insertarUsuarios() {
 				$email = $this->input->post('Email');
 				$contraseña = $this->input->post('Contraseña');
 				$contador = $this->input->post('contador');
+				$rol = $this->input->post('Rol');
 				$auxiliar = $email;
 				for ($i=0; $i < $contador; $i++) { 
 					$auxiliar = $i.$auxiliar;
 					echo $auxiliar;
-					$this->modelo_usuarios->insertarUsuarioss('perico', 'palotes', $auxiliar,'4','2000-03-19', $contraseña,'true');
+					$this->modelo_usuarios->insertarUsuarioss('perico', 'palotes', $auxiliar,$rol,'2000-03-19', $contraseña,'true');
 					$auxiliar = $email;
 				}
 				redirect('usuarios');
