@@ -309,7 +309,7 @@
                             
 
                             <div class="table-responsive">
-                                <table id="example-datatable" class="table table-vcenter table-condensed table-bordered">
+                                <table id="POLLA" class="table table-vcenter table-condensed table-bordered">
                                     <thead>
                                         <tr>
                                             <th class="text-center">Nombre</th>
@@ -444,16 +444,10 @@
 
 
         <!-- Load and execute javascript code used only in this page -->
-        <script src="js/pages/tablesDatatables.js"></script>
+       
+        <script src="<?php echo base_url();?>assets/js/pages/tablesDatatables.js"></script>
         <script>$(function(){ TablesDatatables.init(); });</script>
-
-        <script type="text/javascript">
-            selUsuario = function(id, nombre, apellidos, email){
-                $('#id').val(id);
-                $('#Nombre').val(nombre);
-                $('#Apellidos').val(apellidos);
-                $('#Email').val(email);
-            };
-        </script>
+        
     </body>
+
 </html>

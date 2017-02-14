@@ -43,5 +43,6 @@
         <!-- Load and execute javascript code used only in this page -->
         <script src="<?php echo base_url();?>assets/js/pages/index.js"></script>
         <script>$(function(){ Index.init(); });</script>
-        <script src="js/pages/formsValidation.js"></script>
+        <script src="<?php echo base_url();?>assets/js/pages/formsValidation.js"></script>
         <script>$(function(){ FormsValidation.init(); });</script>
+        
