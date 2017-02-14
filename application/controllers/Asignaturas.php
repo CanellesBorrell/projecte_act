@@ -15,7 +15,7 @@ class Asignaturas extends CI_Controller {
 		if($this->session->userdata('logged_in')){
 			$sesio = $this->session->userdata('logged_in');
 			$data = $this->modelo_asignaturas->getAsignatura();
-			$usuario = $this->modelo_usuarios->getUsuarios();
+			$usuario = $this->modelo_usuarios->getAlumno();
 			$dades = array(
 				'sesio' => $sesio,
 				'usuario' => $usuario,
@@ -56,11 +56,12 @@ class Asignaturas extends CI_Controller {
 	}
 
 	 public function actualizarAsignatura($id) {
-		$sesio = $this->session->userdata('logged_in');
+			$sesio = $this->session->userdata('logged_in');
 			$data = $this->modelo_asignaturas->getUsuariosAsignatura($id);
-			
+			$profesores = $this->modelo_usuarios->getProfesor();
 			$dades = array(
 						'sesio' => $sesio,
+						'profesores' => $profesores,
 						'data' => $data);
 		$this->load->view('actualizar_asignaturas', $dades);
 	}

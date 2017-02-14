@@ -24,6 +24,17 @@ class Modelo_usuarios extends CI_Model{
         $query = $this->db->get();
         return $query->result_array();
     }
+
+    function getAlumno() {
+        $id = 4;
+        $this->db->select('Nombre, Apellidos , id_rol, id_usuario');
+        $this->db->from('usuarios');
+        $this->db->where('id_rol',$id);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
+
     /*
     function completarDades(){
 		
@@ -127,5 +138,14 @@ class Modelo_usuarios extends CI_Model{
 
     function eliminarUsuario($id) {
         $this->db->delete('Usuarios', array('id_usuario' => $id));	
+    }
+
+    function getProfesor() {
+        $id = 3;
+        $this->db->select('Email, id_rol, id_usuario');
+        $this->db->from('usuarios');
+        $this->db->where('id_rol',$id);
+        $query = $this->db->get();
+        return $query->result_array();
     }
 }

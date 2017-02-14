@@ -38,7 +38,7 @@ class Modelo_asignaturas extends CI_Model{
         
     }
 
-    function getUsuariosAsignatura($id) {
+    function getUsuariosAsignatura($id) {  // Filtramos todos los usuarios ligados a una asignatura
         $this->db->select('g.id_Usuarios_Asignaturas, g.id_asignatura, g.id_usuario, u.Email ');
         $this->db->from('usuarios_asignaturas g');
         $this->db->join('usuarios u', 'g.id_usuario = u.id_usuario');
@@ -46,4 +46,8 @@ class Modelo_asignaturas extends CI_Model{
         $query = $this->db->get();
         return $query->result_array(); 
     }
+
+
+
+
 }

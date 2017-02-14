@@ -286,7 +286,68 @@
                     <div id="page-content">
                         <!-- Quick Stats -->
                        
-                        <!-- END Quick Stats -->
+                        <div class="block full">
+                            <!-- All Products Title -->
+                           <div class="row">
+                                <div class="col-sm-6 col-sm-offset-1">
+                                    <div class="block-section">
+                                         <form id="form-validation" action="insertarUsuarios" method="post" class="form-horizontal form-bordered">
+                                        <fieldset>
+                                            <legend><i class="fa fa-angle-right"></i>Modificar Asignatura</legend>
+                                             <div class="form-group">
+                                                <label class="col-md-4 control-label" for="Email">Asignatura <span class="text-danger">*</span></label>
+                                                <div class="col-md-6">
+                                                    <div class="input-group">
+                                                        <input type="text" id="Email" name="Email" class="form-control" placeholder="Introduce un correo electronico">
+                                                        <span class="input-group-addon"><i class="gi gi-envelope"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label" for="Contraseña">Contraseña <span class="text-danger">*</span></label>
+                                                <div class="col-md-6">
+                                                    <div class="input-group">
+                                                        <input type="password" id="Contraseña" name="Contraseña" class="form-control" placeholder="Contraseña">
+                                                        <span class="input-group-addon"><i class="gi gi-asterisk"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label" for="confirma_contraseña">Confirmar la contraseña <span class="text-danger">*</span></label>
+                                                <div class="col-md-6">
+                                                    <div class="input-group">
+                                                        <input type="password" id="confirma_contraseña" name="confirma_contraseña" class="form-control" placeholder="Confirma la Contraseña">
+                                                        <span class="input-group-addon"><i class="gi gi-asterisk"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form-group">
+                                                <label class="col-md-4 control-label" for="example-chosen">Asigna un profesor<span class="text-danger">*</span></label>
+                                                <div class="col-md-6">
+                                                    <select id="Rol" name="Rol" class="select-chosen" data-placeholder="Elige un rol" style="width: 250px;">
+                                                        <option></option><!-- Required for data-placeholder attribute to work with Chosen plugin -->
+                                                         <?php foreach($profesores as $listarprofesores){ ?>
+                                                        <option value="<?php echo $listarprofesores['id_usuario']; ?>"><?php echo $listarprofesores['Email']; ?></option>
+                                                        <?php } ?>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            </div>
+                                             
+                                        </fieldset>
+                                         <div class="form-group form-actions">
+                                            <div class="col-md-8 col-md-offset-4">
+                                                <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-arrow-right"></i> Aceptar</button>
+                                                <button type="reset" class="btn btn-sm btn-warning"><i class="fa fa-repeat"></i> Vaciar</button>
+                                            </div>
+                                        </div>
+                                        </form>
+                                        </div>
+                                </div>
+                            <!-- END All Products Content -->
+                        </div>
+                        <!-- END All Products Block -->
 
                         <!-- All Products Block -->
                         <div class="block full">
@@ -316,7 +377,6 @@
                                        
                                         <td class="text-center">
                                             <button onclick="$('#modal-user-settings').modal('show');" data-toggle="tooltip" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i></button>
-                                            <button class="btn btn-sm btn-default" onclick="$('#modal-agrupar').modal('show'); editar(<?php echo $listarusuarios['id_asignatura']; ?>);"><i class="fa fa-wrench"></i></button>
                                             <button class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button>
                                         </td>
                                     </tr>
