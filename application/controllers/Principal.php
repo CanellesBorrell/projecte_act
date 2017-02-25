@@ -32,7 +32,8 @@ class Principal extends CI_Controller {
 						'sesio' => $sesio,
 						'data' => $data);
 					if ($sesio['Primeravez'] == 1){
-						$this->load->view('primeravez', $dades);
+						redirect('Usuarios/completaDades', 'refresh');
+						//$this->load->view('primeravez', $dades);
 					} 
 					else{	
 						$this->load->view('index', $dades);
