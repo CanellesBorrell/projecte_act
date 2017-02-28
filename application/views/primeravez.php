@@ -54,7 +54,7 @@
         <div id="login-container" class="animation-fadeIn">
             <!-- Login Title -->
             <div class="login-title text-center">
-                <h1><i class="gi gi-flash"></i> <strong>ProUI</strong><br><small>Please <strong>Login</strong> or <strong>Register</strong></small></h1>
+                <h1><i class="gi gi-flash"></i> <strong>ProUI</strong><br><small>Por favor <strong>Complete</strong> los <strong>Campos</strong></small></h1>
             </div>
             <!-- END Login Title -->
 
@@ -62,8 +62,8 @@
             <div class="block push-bit">
                 <!-- Login Form -->
                 <?php echo validation_errors(); ?>
-				<?php echo form_open('Login', 'class="form-horizontal form-bordered form-control-borderless"'); ?>
-                    <div class="form-group">
+				<?php echo form_open('Usuarios/completaDades', 'class="form-horizontal form-bordered form-control-borderless"'); ?>
+                    <div class="form-group"> <!--email-->
                         <div class="col-xs-12">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="gi gi-envelope"></i></span>
@@ -71,28 +71,40 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group"> <!--pw-->
                         <div class="col-xs-12">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="gi gi-asterisk"></i></span>
                                 <input type="password" id="password" name="password" class="form-control input-lg" placeholder="Password">
                             </div>
                         </div>
+                    </div> 
+                    <div class="form-group"> <!--nom-->
+                        <div class="col-xs-12">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="gi gi-envelope"></i></span>
+                                <input type="text" id="nombre" name="nombre" class="form-control input-lg" placeholder="Nombre">
+                            </div>
+                        </div>
                     </div>
+                    <div class="form-group"> <!--apellidos-->
+                        <div class="col-xs-12">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="gi gi-envelope"></i></span>
+                                <input type="text" id="apellidos" name="apellidos" class="form-control input-lg" placeholder="Apellidos">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group"> <!--data naixement-->
+                       <label class="col-md-4 control-label" for="example-city">Fecha de nacimiento<span class="text-danger">*</span></label>
+                       <div class="col-md-8">
+                          <input type="text" id="fecha" name="fecha" class="form-control input-datepicker" data-date-format="yyyy-mm-dd" placeholder="yyyy-mm-dd">
+                       </div>
+                    </div>
+                    
                     <div class="form-group form-actions">
-                        <div class="col-xs-4">
-                            <label class="switch switch-primary" data-toggle="tooltip" title="Remember Me?">
-                                <input type="checkbox" id="login-remember-me" name="login-remember-me" checked>
-                                <span></span>
-                            </label>
-                        </div>
                         <div class="col-xs-8 text-right">
-                            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-angle-right"></i> Entrar</button>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-xs-12 text-center">
-                            <a href="javascript:void(0)" id="link-reminder-login"><small>Olvidaste la contraseña?</small></a> -
+                            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-angle-right"></i> Guardar</button>
                         </div>
                     </div>
                 </form>

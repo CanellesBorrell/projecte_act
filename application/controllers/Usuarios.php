@@ -33,41 +33,41 @@ class Usuarios extends CI_Controller {
 				redirect('login', 'refresh');
 			}
 	}
-	/*
+	
 	public function completaDades(){
 		$sesiotemp = $this->session->userdata('logged_in');
 		if($this->session->userdata('logged_in')){
 			if($sesiotemp['Primeravez']==1){
-				$this->form_validation->set_rules('Nombre', 'Nombre', 'required');
-				$this->form_validation->set_rules('Apellido', 'Apellido', 'required');
-				$this->form_validation->set_rules('Email', 'Email', 'required');
-				$this->form_validation->set_rules('Rol', 'Rol', 'required');
-				$this->form_validation->set_rules('Fecha', 'Fecha', 'required');
-				$this->form_validation->set_rules('Contraseña', 'Contraseña', 'required');
+				$this->form_validation->set_rules('nombre', 'nombre', 'required');
+				$this->form_validation->set_rules('apellidos', 'apellidos', 'required');
+				$this->form_validation->set_rules('email', 'email', 'required');
+				$this->form_validation->set_rules('fecha', 'fecha', 'required');
+				$this->form_validation->set_rules('password', 'password', 'required');
 				$this->form_validation->set_message('required', 'El campo %s es obligado');
 				
 				if($this->form_validation->run() == FALSE) {
-				$data = null;
-				$sesio = $this->session->userdata('logged_in');
-				$dades = array(
+					$data = null;
+					$sesio = $this->session->userdata('logged_in');
+					$dades = array(
 						'sesio' => $sesio,
 						'data' => $data);
-				$this->load->view('primeravez', $dades);
-			}
-			else {
-				$nombre = $this->input->post('Nombre');
-				$apellido = $this->input->post('Apellido');
-				$email = $this->input->post('Email');
-				$rol = $this->input->post('Rol');
-				$fechanacimiento = $this->input->post('Fecha');
-				$contraseña = $this->input->post('Contraseña');
-				$contador = $this->input->post('contador'); 
-				$this->modelo_usuarios->insertarUsuario($nombre, $apellido, $email,$rol ,$fechanacimiento, $contraseña);
-				redirect('usuarios');
+					$this->load->view('primeravez', $dades);
+				}
+				else {
+					$nombre = $this->input->post('nombre');
+					$apellido = $this->input->post('apellidos');
+					$email = $this->input->post('email');
+					$fechanacimiento = $this->input->post('fecha');
+					$contraseña = MD5($this->input->post('password'));
+					$this->modelo_usuarios->CompletarDades($sesiotemp['id_usuario'],$nombre, $apellido, $email ,$fechanacimiento, $contraseña);
+					session_destroy();
+					redirect('login', 'refresh');
+					
 			}
 			}
 		}
-	}*/
+	}
+	
 	public function insertarUsuario() {
 		$sesiotemp = $this->session->userdata('logged_in');
 		if($this->session->userdata('logged_in')){

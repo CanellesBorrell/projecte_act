@@ -35,22 +35,18 @@ class Modelo_usuarios extends CI_Model{
     }
 
 
-    /*
-    function completarDades(){
-		
-		function modificarUsuario($id, $nombre, $apellidos, $email, $password) {
+    
+    function completarDades($id, $nombre, $apellidos, $email, $fechanacimiento, $password) {
             $data=array(
                 'Nombre'=> $nombre,
                 'Apellidos'=> $apellidos,
                 'Email'=> $email,
-                'Contraseña'=> $password);
-
+                'FechaNacimiento'=>$fechanacimiento,
+                'Contraseña'=> $password,
+                'Primeravez'=> 0);
             $this->db->where('id_usuario', $id);
             $this->db->update('Usuarios', $data);
     }
-		
-	}*/
-
 
     
     function login($email, $password) {
