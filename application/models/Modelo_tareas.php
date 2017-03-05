@@ -19,8 +19,8 @@ class modelo_tareas extends CI_Model{
             'Archivo'=> $archivo,
             'Data_vencimiento'=> $datavencimiento,
             'Profesor_asignado'=> $profesorassig,
-            'Comentario'=> $comentario
-            $this->db->insert('Tareas', $data));
+            'Comentario'=> $comentario);
+            $this->db->insert('Tareas', $data);
     }
 
     function modificarTarea() {

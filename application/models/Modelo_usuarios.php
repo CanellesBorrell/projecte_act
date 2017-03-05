@@ -28,7 +28,7 @@ class Modelo_usuarios extends CI_Model{
     function getAlumno() {
         $id = 4;
         $this->db->select('Nombre, Apellidos , id_rol, id_usuario');
-        $this->db->from('usuarios');
+        $this->db->from('Usuarios');
         $this->db->where('id_rol',$id);
         $query = $this->db->get();
         return $query->result_array();
@@ -139,7 +139,7 @@ class Modelo_usuarios extends CI_Model{
     function getProfesor() {
         $id = 3;
         $this->db->select('Email, id_rol, id_usuario');
-        $this->db->from('usuarios');
+        $this->db->from('Usuarios');
         $this->db->where('id_rol',$id);
         $query = $this->db->get();
         return $query->result_array();

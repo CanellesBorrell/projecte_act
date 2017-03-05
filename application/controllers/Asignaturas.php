@@ -24,7 +24,6 @@ class Asignaturas extends CI_Controller {
 					$this->load->view('asignaturas', $dades);	
 				}
 				else {
-
 					$this->load->view('asignaturas', $dades);
 				}
 			}

@@ -48,27 +48,52 @@ class Tareas extends CI_Controller {
 	}
 
 // Futuro codigo de insertar tarea xD cuidado con el puto upload tenemos que comprovar si tenemos una version mejor.
-	/*	public function upload() {
-		$data['content'] = 'Tareas';
-		$this->load->vars($data);
-		$this->load->view('Tareas');
+	public function upload() {
+		if($this->session->userdata('logged_in')){
+			$data['content'] = 'pujarTasca';
+			$this->load->vars($data);
+			$this->load->view('pujarTasca');}
+		else{
+			//If no session, redirect to login page
+			redirect('login', 'refresh');}
 	}
-
-	public function DoUpload() {
-
-		$config_file = array (
-		'upload_path' => './tareas/',
-		'allowed_types' => 'pdf|doc|docx|zip|rar|tar.gz',
+	public function DoUpload($idasignatura) {
+		if($this->session->userdata('logged_in')){
+			$this->load->model('Modelo_escuela');
+			$this->load->model('Modelo_asignaturas');
+			
+			// query que retorna nom de la escola (traure de la variable de sesio id_escuela)
+			$sesio = $this->session->userdata('logged_in');
+			$nomescola = $this->Modelo_escuela->getNomEscuela($sesio['id_escuela']);
+			//falta nom asignatura (lo mateix de dalt..)
+			$nomasignatura = $this->Modelo_asignaturas->getNomAsignatura($idasignatura);
+			$path = "./tareas/".$nomescola."/".$nomasignatura;
+			if(!is_dir("./tareas/")) //crea la carpeta si no existeix
+			{
+				mkdir("./tareas/",0755,TRUE);
+			}
+			
+			if(!is_dir("./tareas/".$nomescola)) //crea la carpeta de la escola si no existeix
+			{
+				mkdir("./tareas/".$nomescola,0755,TRUE);
+			}
+			
+			
+			if(!is_dir($path)) //crea la carpeta de la asignatura si no existeix
+			{
+				mkdir($path,0755,TRUE);
+			}
+		$config_file = array(
+		'upload_path' => $path,
+		'allowed_types' => 'png|jpg',
 		'overwrite' => false,
 		'max_size' => 0,
 		'max_width' => 0,
 		'max_height' => 0,
 		'encrypt_name' => false,
-		'remove_spaces' => true,
-		);
+		'remove_spaces' => true, );
 		$this->upload->initialize($config_file);
-		if (!$this->upload->do_upload('cipote')) {
-			redirect('welcome/partitura');
+		if (!$this->upload->do_upload('Tareas')) {
 			$error = $this->upload->display_errors();
 			echo $error;
 		}
@@ -77,7 +102,11 @@ class Tareas extends CI_Controller {
 			$nom = $this->upload->file_name;
 			$file_name = base_url()."partitures/".$this->upload->file_name;
 			$this->model_concerts->insertPartitures($nom, $file_name);
-			redirect(Tareas/tarea)
+			redirect('Tareas/tarea');
 			}
-	}*/
+	}
+	else{
+     //If no session, redirect to login page
+     redirect('login', 'refresh');}
+	}
 }
