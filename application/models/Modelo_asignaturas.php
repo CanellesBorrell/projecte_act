@@ -13,6 +13,15 @@ class Modelo_asignaturas extends CI_Model{
         $query = $this->db->get('Asignaturas');
         return $query->result_array();
     }
+    
+    function getNomAsignatura($idasignatura) {
+		$this->db->select('Asignatura');
+		$query = $this->db->where('id_asignatura', $idasignatura);
+        $query = $this->db->get('Asignaturas');
+        if($query -> num_rows() == 1) {
+            return $query->row()->Asignatura; 
+        }
+    }
 
     function insertarAsignatura($asignatura) {
         $data = array(
@@ -33,15 +42,15 @@ class Modelo_asignaturas extends CI_Model{
         $data = array(
             'id_usuario'=> $alumnos,
             'id_asignatura' => $id);
-        $this->db->insert('usuarios_asignaturas', $data);
+        $this->db->insert('Usuarios_Asignaturas', $data);
 
         
     }
 
     function getUsuariosAsignatura($id) {  // Filtramos todos los usuarios ligados a una asignatura
         $this->db->select('g.id_Usuarios_Asignaturas, g.id_asignatura, g.id_usuario, u.Email ');
-        $this->db->from('usuarios_asignaturas g');
-        $this->db->join('usuarios u', 'g.id_usuario = u.id_usuario');
+        $this->db->from('Usuarios_Asignaturas g');
+        $this->db->join('Usuarios u', 'g.id_usuario = u.id_usuario');
         $this->db->where('g.id_asignatura',$id);
         $query = $this->db->get();
         return $query->result_array(); 
