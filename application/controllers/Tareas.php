@@ -101,7 +101,7 @@ class Tareas extends CI_Controller {
 			$this->session->set_flashdata('success_upload','Pujat Correcament');
 			$nom = $this->upload->file_name;
 			$file_name = base_url()."partitures/".$this->upload->file_name;
-			$this->model_concerts->insertPartitures($nom, $file_name);
+			$this->modelo_tareas->insertPartitures($nom, $file_name);
 			redirect('Tareas/tarea');
 			}
 	}

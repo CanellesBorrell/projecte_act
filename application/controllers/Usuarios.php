@@ -148,7 +148,7 @@ public function insertarUsuarios() {
 				for ($i=0; $i < $contador; $i++) { 
 					$auxiliar = $i.$email;
 					echo $auxiliar;
-					$this->modelo_usuarios->insertarUsuarioss('perico', 'palotes', $auxiliar,$rol,'2000-03-19', $contraseña,'true');
+					$this->modelo_usuarios->insertarUsuarioss('perico', 'palotes', $auxiliar,$rol,'2000-03-19', $contraseña,'1 ');
 					
 				}
 				redirect('usuarios');
