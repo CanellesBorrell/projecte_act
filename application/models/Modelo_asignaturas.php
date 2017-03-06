@@ -43,8 +43,23 @@ class Modelo_asignaturas extends CI_Model{
             'id_usuario'=> $alumnos,
             'id_asignatura' => $id);
         $this->db->insert('Usuarios_Asignaturas', $data);
-
+        $id_grupo = getGrupoAsignatura($id_asignatura);
+        $estadentro = mysql_num_rows(getGrupoAsignatura($id_asignatura));
+        if($estadentro != 0) { 
+            $datos = array(
+                'id_grupo' => $id_grupo,
+                'id_usuario' => $alumnos);
+            $this->db->insert('usuarios_grupos',$datos);
+        }
         
+    }
+
+    function getGrupoAsignatura($id_asignatura) {
+        $this->db->select('id_grupo');
+        $this->db->from('grupos_asignaturas');
+        $this->db->where('id_asignatura',$id_asignatura);
+        $query = $this->db->get();
+        return $query->result_array()->row()->id_grupo;
     }
 
     function getUsuariosAsignatura($id) {  // Filtramos todos los usuarios ligados a una asignatura

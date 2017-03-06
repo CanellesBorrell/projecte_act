@@ -12,7 +12,9 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-       <?php include('imports.php'); ?>
+        <!-- Icons -->
+        <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+         <?php include('imports.php');?>
     </head>
     <body>
         <!-- Page Wrapper -->
@@ -68,191 +70,11 @@
             -->
             <div id="page-container" class="sidebar-partial sidebar-visible-lg sidebar-no-animations">
                 <!-- Alternative Sidebar -->
-                <div id="sidebar-alt">
-                    <!-- Wrapper for scrolling functionality -->
-                    <div id="sidebar-alt-scroll">
-                        <!-- Sidebar Content -->
-                        <div class="sidebar-content">
-                            <!-- Chat -->
-                            <!-- Chat demo functionality initialized in js/app.js -> chatUi() -->
-                            <a href="page_ready_chat.html" class="sidebar-title">
-                                <i class="gi gi-comments pull-right"></i> <strong>Chat</strong>UI
-                            </a>
-                            <!-- Chat Users -->
-                            <ul class="chat-users clearfix">
-                                <li>
-                                    <a href="javascript:void(0)" class="chat-user-online">
-                                        <span></span>
-                                        <img src="img/placeholders/avatars/avatar12.jpg" alt="avatar" class="img-circle">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="chat-user-online">
-                                        <span></span>
-                                        <img src="img/placeholders/avatars/avatar15.jpg" alt="avatar" class="img-circle">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="chat-user-online">
-                                        <span></span>
-                                        <img src="img/placeholders/avatars/avatar10.jpg" alt="avatar" class="img-circle">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="chat-user-online">
-                                        <span></span>
-                                        <img src="img/placeholders/avatars/avatar4.jpg" alt="avatar" class="img-circle">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="chat-user-away">
-                                        <span></span>
-                                        <img src="img/placeholders/avatars/avatar7.jpg" alt="avatar" class="img-circle">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="chat-user-away">
-                                        <span></span>
-                                        <img src="img/placeholders/avatars/avatar9.jpg" alt="avatar" class="img-circle">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="chat-user-busy">
-                                        <span></span>
-                                        <img src="img/placeholders/avatars/avatar16.jpg" alt="avatar" class="img-circle">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <span></span>
-                                        <img src="img/placeholders/avatars/avatar1.jpg" alt="avatar" class="img-circle">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <span></span>
-                                        <img src="img/placeholders/avatars/avatar4.jpg" alt="avatar" class="img-circle">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <span></span>
-                                        <img src="img/placeholders/avatars/avatar3.jpg" alt="avatar" class="img-circle">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <span></span>
-                                        <img src="img/placeholders/avatars/avatar13.jpg" alt="avatar" class="img-circle">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <span></span>
-                                        <img src="img/placeholders/avatars/avatar5.jpg" alt="avatar" class="img-circle">
-                                    </a>
-                                </li>
-                            </ul>
-                            <!-- END Chat Users -->
-
-                            <!-- Chat Talk -->
-                            <div class="chat-talk display-none">
-                                <!-- Chat Info -->
-                                <div class="chat-talk-info sidebar-section">
-                                    <button id="chat-talk-close-btn" class="btn btn-xs btn-default pull-right">
-                                        <i class="fa fa-times"></i>
-                                    </button>
-                                    <img src="img/placeholders/avatars/avatar5.jpg" alt="avatar" class="img-circle pull-left">
-                                    <strong>John</strong> Doe
-                                </div>
-                                <!-- END Chat Info -->
-
-                                <!-- Chat Messages -->
-                                <ul class="chat-talk-messages">
-                                    <li class="text-center"><small>Yesterday, 18:35</small></li>
-                                    <li class="chat-talk-msg animation-slideRight">Hey admin?</li>
-                                    <li class="chat-talk-msg animation-slideRight">How are you?</li>
-                                    <li class="text-center"><small>Today, 7:10</small></li>
-                                    <li class="chat-talk-msg chat-talk-msg-highlight themed-border animation-slideLeft">I'm fine, thanks!</li>
-                                </ul>
-                                <!-- END Chat Messages -->
-
-                                <!-- Chat Input -->
-                                <form action="index.html" method="post" id="sidebar-chat-form" class="chat-form">
-                                    <input type="text" id="sidebar-chat-message" name="sidebar-chat-message" class="form-control form-control-borderless" placeholder="Type a message..">
-                                </form>
-                                <!-- END Chat Input -->
-                            </div>
-                            <!--  END Chat Talk -->
-                            <!-- END Chat -->
-
-                            <!-- Activity -->
-                            <a href="javascript:void(0)" class="sidebar-title">
-                                <i class="fa fa-globe pull-right"></i> <strong>Activity</strong>UI
-                            </a>
-                            <div class="sidebar-section">
-                                <div class="alert alert-danger alert-alt">
-                                    <small>just now</small><br>
-                                    <i class="fa fa-thumbs-up fa-fw"></i> Upgraded to Pro plan
-                                </div>
-                                <div class="alert alert-info alert-alt">
-                                    <small>2 hours ago</small><br>
-                                    <i class="gi gi-coins fa-fw"></i> You had a new sale!
-                                </div>
-                                <div class="alert alert-success alert-alt">
-                                    <small>3 hours ago</small><br>
-                                    <i class="fa fa-plus fa-fw"></i> <a href="page_ready_user_profile.html"><strong>John Doe</strong></a> would like to become friends!<br>
-                                    <a href="javascript:void(0)" class="btn btn-xs btn-primary"><i class="fa fa-check"></i> Accept</a>
-                                    <a href="javascript:void(0)" class="btn btn-xs btn-default"><i class="fa fa-times"></i> Ignore</a>
-                                </div>
-                                <div class="alert alert-warning alert-alt">
-                                    <small>2 days ago</small><br>
-                                    Running low on space<br><strong>18GB in use</strong> 2GB left<br>
-                                    <a href="page_ready_pricing_tables.html" class="btn btn-xs btn-primary"><i class="fa fa-arrow-up"></i> Upgrade Plan</a>
-                                </div>
-                            </div>
-                            <!-- END Activity -->
-
-                            <!-- Messages -->
-                            <a href="page_ready_inbox.html" class="sidebar-title">
-                                <i class="fa fa-envelope pull-right"></i> <strong>Messages</strong>UI (5)
-                            </a>
-                            <div class="sidebar-section">
-                                <div class="alert alert-alt">
-                                    Debra Stanley<small class="pull-right">just now</small><br>
-                                    <a href="page_ready_inbox_message.html"><strong>New Follower</strong></a>
-                                </div>
-                                <div class="alert alert-alt">
-                                    Sarah Cole<small class="pull-right">2 min ago</small><br>
-                                    <a href="page_ready_inbox_message.html"><strong>Your subscription was updated</strong></a>
-                                </div>
-                                <div class="alert alert-alt">
-                                    Bryan Porter<small class="pull-right">10 min ago</small><br>
-                                    <a href="page_ready_inbox_message.html"><strong>A great opportunity</strong></a>
-                                </div>
-                                <div class="alert alert-alt">
-                                    Jose Duncan<small class="pull-right">30 min ago</small><br>
-                                    <a href="page_ready_inbox_message.html"><strong>Account Activation</strong></a>
-                                </div>
-                                <div class="alert alert-alt">
-                                    Henry Ellis<small class="pull-right">40 min ago</small><br>
-                                    <a href="page_ready_inbox_message.html"><strong>You reached 10.000 Followers!</strong></a>
-                                </div>
-                            </div>
-                            <!-- END Messages -->
-                        </div>
-                        <!-- END Sidebar Content -->
-                    </div>
-                    <!-- END Wrapper for scrolling functionality -->
-                </div>
+                
                 <!-- END Alternative Sidebar -->
 
                 <!-- Main Sidebar -->
-                <?php include('menu.php'); ?>
-                        <!-- END Sidebar Content -->
-                    </div>
-                    <!-- END Wrapper for scrolling functionality -->
-                </div>
+                <?php include('menu.php');?>
                 <!-- END Main Sidebar -->
 
                 <!-- Main Container -->
@@ -271,526 +93,258 @@
                         'navbar-fixed-bottom'       for a bottom fixed header (fixed sidebars with scroll will be auto initialized, functionality can be found in js/app.js - handleSidebar()))
                             'header-fixed-bottom'   has to be added on #page-container only if the class 'navbar-fixed-bottom' was added
                     -->
+                    <header class="navbar navbar-default">
+                        <!-- Left Header Navigation -->
+                        <ul class="nav navbar-nav-custom">
+                            <!-- Main Sidebar Toggle Button -->
+                            <li>
+                                <a href="javascript:void(0)" onclick="App.sidebar('toggle-sidebar');this.blur();">
+                                    <i class="fa fa-bars fa-fw"></i>
+                                </a>
+                            </li>
+                            <!-- END Main Sidebar Toggle Button -->
 
+                            <!-- Template Options -->
+                            <!-- Change Options functionality can be found in js/app.js - templateOptions() -->
+                            
+                            <!-- END Template Options -->
+                        </ul>
+                        <!-- END Left Header Navigation -->
+
+                       
+                            <!-- END Alternative Sidebar Toggle Button -->
+
+                           
+                        <!-- END Right Header Navigation -->
+                    </header>
                     <!-- END Header -->
 
                     <!-- Page content -->
                     <div id="page-content">
-                        <!-- User Profile Header -->
-                        <!-- For an image header add the class 'content-header-media' and an image as in the following example -->
-                        <div class="content-header content-header-media">
-                            <div class="header-section">
-                                <img src="img/placeholders/avatars/avatar2.jpg" alt="Avatar" class="pull-right img-circle">
-                                <h1>John Doe <br><small>Life Explorer &amp; Traveller</small></h1>
-                            </div>
-                            <!-- For best results use an image with a resolution of 2560x248 pixels (You can also use a blurred image with ratio 10:1 - eg: 1000x100 pixels - it will adjust and look great!) -->
-                            <img src="img/placeholders/headers/profile_header.jpg" alt="header image" class="animation-pulseSlow">
-                        </div>
-                        <!-- END User Profile Header -->
+                       
 
-                        <!-- User Profile Content -->
+                        <!-- Customer Content -->
                         <div class="row">
-                            <!-- First Column -->
-                            <div class="col-md-6 col-lg-7">
-                                <!-- Updates Block -->
+                            <div class="col-lg-4">
+                                <!-- Customer Info Block -->
                                 <div class="block">
-                                    <!-- Updates Title -->
+                                    <!-- Customer Info Title -->
                                     <div class="block-title">
-                                        <div class="block-options pull-right">
-                                            <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default" data-toggle="tooltip" title="Privacy Settings"><i class="fa fa-cog"></i></a>
-                                        </div>
-                                        <h2><strong>Share</strong> something..</h2>
+                                        <h2><i class="fa fa-file-o"></i> <strong>Perfil</strong> Usuario</h2>
                                     </div>
-                                    <!-- END Updates Title -->
+                                    <!-- END Customer Info Title -->
 
-                                    <!-- Update Status Form -->
-                                    <form action="page_ready_user_profile.html" method="post" class="block-content-full block-content-mini-padding" onsubmit="return false;">
-                                        <textarea id="default-textarea" name="default-textarea" rows="2" class="form-control push-bit" placeholder="What are you thinking?"></textarea>
-                                        <div class="clearfix">
-                                            <button type="submit" class="btn btn-sm btn-primary pull-right"><i class="fa fa-pencil"></i> Post</button>
-                                            <a href="javascript:void(0)" class="btn btn-link btn-icon" data-toggle="tooltip" data-placement="bottom" title="Add Location"><i class="fa fa-location-arrow"></i></a>
-                                            <a href="javascript:void(0)" class="btn btn-link btn-icon" data-toggle="tooltip" data-placement="bottom" title="Add Voice"><i class="fa fa-microphone"></i></a>
-                                            <a href="javascript:void(0)" class="btn btn-link btn-icon" data-toggle="tooltip" data-placement="bottom" title="Add Photo"><i class="fa fa-camera"></i></a>
-                                            <a href="javascript:void(0)" class="btn btn-link btn-icon" data-toggle="tooltip" data-placement="bottom" title="Add File"><i class="fa fa-file"></i></a>
-                                        </div>
-                                    </form>
-                                    <!-- END Update Status Form -->
-                                </div>
-                                <!-- END Updates Block -->
-
-                                <!-- Newsfeed Block -->
-                                <div class="block">
-                                    <!-- Newsfeed Title -->
-                                    <div class="block-title">
-                                        <div class="block-options pull-right">
-                                            <a href="javascript:void(0)" class="label label-danger animation-pulse">Live Feed</a>
-                                            <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default" data-toggle="tooltip" title="Customize Feed"><i class="fa fa-pencil"></i></a>
-                                        </div>
-                                        <h2><strong>Newsfeed</strong></h2>
+                                    <!-- Customer Info -->
+                                    <div class="block-section text-center">
+                                        <a href="javascript:void(0)">
+                                            <img src="img/placeholders/avatars/avatar4@2x.jpg" alt="avatar" class="img-circle">
+                                        </a>
+                                        <h3>
+                                            <strong><?php echo $sesio['Nombre'];?> <?echo $sesio['Apellidos'];?></strong><br><small></small>
+                                        </h3>
                                     </div>
-                                    <!-- END Newsfeed Title -->
-
-                                    <!-- Newsfeed Content -->
-                                    <div class="block-content-full">
-                                        <!-- You can remove the class .media-feed-hover if you don't want each event to be highlighted on mouse hover -->
-                                        <ul class="media-list media-feed media-feed-hover">
-                                            <!-- Photos Uploaded -->
-                                            <!-- Example effect of the following update showing up in Newsfeed (initialized in js/pages/readyProfile.js) -->
-                                            <li id="newsfeed-update-example" class="media display-none">
-                                                <a href="page_ready_user_profile.html" class="pull-left">
-                                                    <img src="img/placeholders/avatars/avatar8.jpg" alt="Avatar" class="img-circle">
-                                                </a>
-                                                <div class="media-body">
-                                                    <p class="push-bit">
-                                                        <span class="text-muted pull-right">
-                                                            <small>just now</small>
-                                                            <span class="text-success" data-toggle="tooltip" title="From Mobile"><i class="fa fa-mobile"></i></span>
-                                                        </span>
-                                                        <strong><a href="page_ready_user_profile.html">User</a> uploaded 2 new photos.</strong>
-                                                    </p>
-                                                    <div class="row push">
-                                                        <div class="col-sm-6 col-md-4">
-                                                            <a href="img/placeholders/photos/photo13.jpg" data-toggle="lightbox-image">
-                                                                <img src="img/placeholders/photos/photo13.jpg" alt="image">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-sm-6 col-md-4">
-                                                            <a href="img/placeholders/photos/photo23.jpg" data-toggle="lightbox-image">
-                                                                <img src="img/placeholders/photos/photo23.jpg" alt="image">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <p>
-                                                        <a href="javascript:void(0)" class="btn btn-xs btn-default"><i class="fa fa-thumbs-o-up"></i> Like</a>
-                                                        <a href="javascript:void(0)" class="btn btn-xs btn-default"><i class="fa fa-comments-o"></i> Comment</a>
-                                                        <a href="javascript:void(0)" class="btn btn-xs btn-default"><i class="fa fa-share-square-o"></i> Share</a>
-                                                    </p>
-                                                </div>
-                                            </li>
-                                            <!-- END Photos Uploaded -->
-
-                                            <!-- Story Published -->
-                                            <li class="media">
-                                                <a href="page_ready_user_profile.html" class="pull-left">
-                                                    <img src="img/placeholders/avatars/avatar13.jpg" alt="Avatar" class="img-circle">
-                                                </a>
-                                                <div class="media-body">
-                                                    <p class="push-bit">
-                                                        <span class="text-muted pull-right">
-                                                            <small>45 min now</small>
-                                                            <span class="text-danger" data-toggle="tooltip" title="From Web"><i class="fa fa-globe"></i></span>
-                                                        </span>
-                                                        <strong><a href="page_ready_user_profile.html">Explorer</a> published a new story.</strong>
-                                                    </p>
-                                                    <h5><a href="page_ready_article.html"><strong>The Mountain Trip</strong> &bull; Once in a lifetime experience</a></h5>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices, justo vel imperdiet gravida, urna ligula hendrerit nibh, ac cursus nibh sapien in purus. Mauris tincidunt tincidunt turpis in porta. Etiam egestas fringilla enim, id convallis lectus laoreet at. Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque? Proin rhoncus dui at ligula vestibulum ut facilisis ante sodales! Suspendisse potenti..</p>
-                                                    <p>
-                                                        <a href="javascript:void(0)" class="btn btn-xs btn-success"><i class="fa fa-thumbs-up"></i> You Like it</a>
-                                                        <a href="javascript:void(0)" class="btn btn-xs btn-default"><i class="fa fa-share-square-o"></i> Share</a>
-                                                    </p>
-
-                                                    <!-- Comments -->
-                                                    <ul class="media-list push">
-                                                        <li class="media">
-                                                            <a href="page_ready_user_profile.html" class="pull-left">
-                                                                <img src="img/placeholders/avatars/avatar1.jpg" alt="Avatar" class="img-circle">
-                                                            </a>
-                                                            <div class="media-body">
-                                                                <a href="page_ready_user_profile.html"><strong>User</strong></a>
-                                                                <span class="text-muted"><small><em>29 min ago</em></small></span>
-                                                                <p>Sed porttitor pretium venenatis. Suspendisse potenti. Aliquam quis ligula elit. Aliquam at orci ac neque semper dictum.</p>
-                                                            </div>
-                                                        </li>
-                                                        <li class="media">
-                                                            <a href="page_ready_user_profile.html" class="pull-left">
-                                                                <img src="img/placeholders/avatars/avatar2.jpg" alt="Avatar" class="img-circle">
-                                                            </a>
-                                                            <div class="media-body">
-                                                                <a href="page_ready_user_profile.html"><strong>User</strong></a>
-                                                                <span class="text-muted"><small><em>18 min ago</em></small></span>
-                                                                <p>In hac habitasse platea dictumst. Proin ac nibh rutrum lectus rhoncus eleifend</p>
-                                                            </div>
-                                                        </li>
-                                                        <li class="media">
-                                                            <a href="page_ready_user_profile.html" class="pull-left">
-                                                                <img src="img/placeholders/avatars/avatar.jpg" alt="Avatar" class="img-circle">
-                                                            </a>
-                                                            <div class="media-body">
-                                                                <form action="page_ready_user_profile.html" method="post" onsubmit="return false;">
-                                                                    <textarea id="profile-newsfeed-comment1" name="profile-newsfeed-comment1" class="form-control" rows="2" placeholder="Your comment.."></textarea>
-                                                                    <button type="submit" class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i> Post Comment</button>
-                                                                </form>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                    <!-- END Comments -->
-                                                </div>
-                                            </li>
-                                            <!-- END Story Published -->
-
-                                            <!-- Check in -->
-                                            <li class="media">
-                                                <a href="page_ready_user_profile.html" class="pull-left">
-                                                    <img src="img/placeholders/avatars/avatar12.jpg" alt="Avatar" class="img-circle">
-                                                </a>
-                                                <div class="media-body">
-                                                    <p class="push-bit">
-                                                        <span class="text-muted pull-right">
-                                                            <small>1 hour ago</small>
-                                                            <span class="text-success" data-toggle="tooltip" title="From Mobile"><i class="fa fa-mobile"></i></span>
-                                                        </span>
-                                                        <strong><a href="page_ready_user_profile.html">Adventurer</a> checked in at <a href="javascript:void(0)">Cafe-Bar</a>.</strong>
-                                                    </p>
-                                                    <div id="gmap-checkin" class="gmap push"></div>
-                                                    <p>
-                                                        <a href="javascript:void(0)" class="btn btn-xs btn-default"><i class="fa fa-thumbs-o-up"></i> Like</a>
-                                                        <a href="javascript:void(0)" class="btn btn-xs btn-default"><i class="fa fa-comments-o"></i> Comment</a>
-                                                        <a href="javascript:void(0)" class="btn btn-xs btn-default"><i class="fa fa-share-square-o"></i> Share</a>
-                                                    </p>
-                                                </div>
-                                            </li>
-                                            <!-- END Check in -->
-
-                                            <!-- Status Updated -->
-                                            <li class="media">
-                                                <a href="page_ready_user_profile.html" class="pull-left">
-                                                    <img src="img/placeholders/avatars/avatar14.jpg" alt="Avatar" class="img-circle">
-                                                </a>
-                                                <div class="media-body">
-                                                    <p class="push-bit">
-                                                        <span class="text-muted pull-right">
-                                                            <small>5 hours ago</small>
-                                                            <span class="text-info" data-toggle="tooltip" title="From Custom App"><i class="fa fa-wrench"></i></span>
-                                                        </span>
-                                                        <strong><a href="page_ready_user_profile.html">User</a> updated status.</strong>
-                                                    </p>
-                                                    <p>Hey there! First post from the new application!</p>
-                                                    <p>
-                                                        <a href="javascript:void(0)" class="btn btn-xs btn-default"><i class="fa fa-thumbs-o-up"></i> Like</a>
-                                                        <a href="javascript:void(0)" class="btn btn-xs btn-default"><i class="fa fa-share-square-o"></i> Share</a>
-                                                    </p>
-                                                    <!-- Comments -->
-                                                    <ul class="media-list push">
-                                                        <li class="media">
-                                                            <a href="page_ready_user_profile.html" class="pull-left">
-                                                                <img src="img/placeholders/avatars/avatar10.jpg" alt="Avatar" class="img-circle">
-                                                            </a>
-                                                            <div class="media-body">
-                                                                <a href="page_ready_user_profile.html"><strong>User</strong></a>
-                                                                <span class="text-muted"><small><em>1 hour ago</em></small></span>
-                                                                <p>Aliquam quis ligula elit. Aliquam at orci ac neque semper dictum.</p>
-                                                            </div>
-                                                        </li>
-                                                        <li class="media">
-                                                            <a href="page_ready_user_profile.html" class="pull-left">
-                                                                <img src="img/placeholders/avatars/avatar.jpg" alt="Avatar" class="img-circle">
-                                                            </a>
-                                                            <div class="media-body">
-                                                                <form action="page_ready_user_profile.html" method="post" onsubmit="return false;">
-                                                                    <textarea id="profile-newsfeed-comment" name="profile-newsfeed-comment" class="form-control" rows="2" placeholder="Your comment.."></textarea>
-                                                                    <button type="submit" class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i> Post Comment</button>
-                                                                </form>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                    <!-- END Comments -->
-                                                </div>
-                                            </li>
-                                            <li class="media text-center">
-                                                <a href="javascript:void(0)" class="btn btn-xs btn-default push">View more..</a>
-                                            </li>
-                                            <!-- END Status Updated -->
-                                        </ul>
-                                    </div>
-                                    <!-- END Newsfeed Content -->
-                                </div>
-                                <!-- END Newsfeed Block -->
-                            </div>
-                            <!-- END First Column -->
-
-                            <!-- Second Column -->
-                            <div class="col-md-6 col-lg-5">
-                                <!-- Info Block -->
-                                <div class="block">
-                                    <!-- Info Title -->
-                                    <div class="block-title">
-                                        <div class="block-options pull-right">
-                                            <a href="javascript:void(0)" class="btn btn-alt btn-sm btn-default" data-toggle="tooltip" title="Friend Request"><i class="fa fa-plus"></i></a>
-                                            <a href="javascript:void(0)" class="btn btn-alt btn-sm btn-default" data-toggle="tooltip" title="Hire"><i class="fa fa-briefcase"></i></a>
-                                        </div>
-                                        <h2>About <strong>John Doe</strong> <small>&bull; <i class="fa fa-file-text text-primary"></i> <a href="javascript:void(0)" data-toggle="tooltip" title="Download Bio in PDF">Bio</a></small></h2>
-                                    </div>
-                                    <!-- END Info Title -->
-
-                                    <!-- Info Content -->
-                                    <table class="table table-borderless table-striped">
+                                    <table class="table table-borderless table-striped table-vcenter">
                                         <tbody>
                                             <tr>
-                                                <td style="width: 20%;"><strong>Info</strong></td>
-                                                <td>Proin ac nibh rutrum lectus rhoncus eleifend. Sed porttitor pretium venenatis. Suspendisse potenti. Aliquam quis ligula elit. Aliquam at orci ac neque semper dictum. Sed tincidunt scelerisque ligula, et facilisis nulla hendrerit non.</td>
+                                                <td class="text-right"><strong>Birthdate</strong></td>
+                                                <td>November 20, 1984</td>
                                             </tr>
                                             <tr>
-                                                <td><strong>Founder</strong></td>
-                                                <td><a href="javascript:void(0)">Company Inc</a></td>
+                                                <td class="text-right"><strong>Registration</strong></td>
+                                                <td>15/10/2014 - 12:25</td>
                                             </tr>
                                             <tr>
-                                                <td><strong>Education</strong></td>
-                                                <td><a href="javascript:void(0)">University Name</a></td>
+                                                <td class="text-right"><strong>Last Visit</strong></td>
+                                                <td>06/11/2014 - 09:41</td>
                                             </tr>
                                             <tr>
-                                                <td><strong>Projects</strong></td>
-                                                <td><a href="javascript:void(0)" class="label label-danger">168</a></td>
+                                                <td class="text-right"><strong>Language</strong></td>
+                                                <td>English (UK)</td>
                                             </tr>
                                             <tr>
-                                                <td><strong>Best Skills</strong></td>
-                                                <td>
-                                                    <a href="javascript:void(0)" class="label label-info">HTML</a>
-                                                    <a href="javascript:void(0)" class="label label-info">CSS</a>
-                                                    <a href="javascript:void(0)" class="label label-info">Javascript</a>
+                                                <td class="text-right"><strong>Registrations</strong></td>
+                                                <td><span class="label label-primary">Newsletter</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right"><strong>Status</strong></td>
+                                                <td><span class="label label-success"><i class="fa fa-check"></i> Active</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- END Customer Info -->
+                                </div>
+                                <!-- END Customer Info Block -->
+
+                                <!-- Quick Stats Block -->
+                                <div class="block">
+                                    <!-- Quick Stats Title -->
+                                    <div class="block-title">
+                                        <h2><i class="fa fa-line-chart"></i> <strong>Información</strong> del Juego</h2>
+                                    </div>
+                                    <!-- END Quick Stats Title -->
+
+                                    <!-- Quick Stats Content -->
+                                    <a href="javascript:void(0)" class="widget widget-hover-effect2 themed-background-muted-light">
+                                        <div class="widget-simple">
+                                            <div class="widget-icon pull-right themed-background">
+                                                <i class="fa fa-truck"></i>
+                                            </div>
+                                            <h4 class="text-left">
+                                                <strong>4</strong><br><small>Orders in Total</small>
+                                            </h4>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:void(0)" class="widget widget-hover-effect2 themed-background-muted-light">
+                                        <div class="widget-simple">
+                                            <div class="widget-icon pull-right themed-background-success">
+                                                <i class="fa fa-usd"></i>
+                                            </div>
+                                            <h4 class="text-left text-success">
+                                                <strong>$ 2.125,00</strong><br><small>Orders Value</small>
+                                            </h4>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:void(0)" class="widget widget-hover-effect2 themed-background-muted-light">
+                                        <div class="widget-simple">
+                                            <div class="widget-icon pull-right themed-background-warning">
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </div>
+                                            <h4 class="text-left text-warning">
+                                                <strong>3</strong> ($ 517,00)<br><small>Products in Cart</small>
+                                            </h4>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:void(0)" class="widget widget-hover-effect2 themed-background-muted-light">
+                                        <div class="widget-simple">
+                                            <div class="widget-icon pull-right themed-background-info">
+                                                <i class="fa fa-group"></i>
+                                            </div>
+                                            <h4 class="text-left text-info">
+                                                <strong>2</strong><br><small>Referred Members</small>
+                                            </h4>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:void(0)" class="widget widget-hover-effect2 themed-background-muted-light">
+                                        <div class="widget-simple">
+                                            <div class="widget-icon pull-right themed-background-danger">
+                                                <i class="fa fa-heart"></i>
+                                            </div>
+                                            <h4 class="text-left text-danger">
+                                                <strong>15</strong><br><small>Favorite Products</small>
+                                            </h4>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:void(0)" class="widget widget-hover-effect2 themed-background-muted-light">
+                                        <div class="widget-simple">
+                                            <div class="widget-icon pull-right themed-background-muted">
+                                                <i class="fa fa-ticket"></i>
+                                            </div>
+                                            <h4 class="text-left text-muted">
+                                                <strong>2</strong><br><small>Tickets</small>
+                                            </h4>
+                                        </div>
+                                    </a>
+                                    <!-- END Quick Stats Content -->
+                                </div>
+                                <!-- END Quick Stats Block -->
+                            </div>
+                            <div class="col-lg-8">
+                                <!-- Orders Block -->
+                                <div class="block">
+                                    <!-- Orders Title -->
+                                    <div class="block-title">
+                                        <div class="block-options pull-right">
+                                            <span class="label label-success"><strong>$ 2125,00</strong></span>
+                                        </div>
+                                        <h2><i class="fa fa-truck"></i> <strong>Tareas </strong>pendientes</h2>
+                                    </div>
+                                    <!-- END Orders Title -->
+
+                                    <!-- Orders Content -->
+                                    <table class="table table-bordered table-striped table-vcenter">
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center" style="width: 100px;"><a href="page_ecom_order_view.html"><strong>ORD.685199</strong></a></td>
+                                                <td class="hidden-xs" style="width: 15%;"><a href="javascript:void(0)">5 Products</a></td>
+                                                <td class="text-right hidden-xs" style="width: 10%;"><strong>$585,00</strong></td>
+                                                <td><span class="label label-warning">Processing</span></td>
+                                                <td class="hidden-xs">Paypal</td>
+                                                <td class="hidden-xs text-center">16/11/2014</td>
+                                                <td class="text-center" style="width: 70px;">
+                                                    <div class="btn-group btn-group-xs">
+                                                        <a href="page_ecom_order_view.html" data-toggle="tooltip" title="" class="btn btn-default" data-original-title="View"><i class="fa fa-eye"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-xs btn-danger" data-original-title="Delete"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center"><a href="page_ecom_order_view.html"><strong>ORD.685198</strong></a></td>
+                                                <td class="hidden-xs"><a href="javascript:void(0)">2 Products</a></td>
+                                                <td class="text-right hidden-xs"><strong>$958,00</strong></td>
+                                                <td><span class="label label-info">For delivery</span></td>
+                                                <td class="hidden-xs">Credit Card</td>
+                                                <td class="hidden-xs text-center">03/10/2014</td>
+                                                <td class="text-center">
+                                                    <div class="btn-group btn-group-xs">
+                                                        <a href="page_ecom_order_view.html" data-toggle="tooltip" title="" class="btn btn-default" data-original-title="View"><i class="fa fa-eye"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-xs btn-danger" data-original-title="Delete"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center"><a href="page_ecom_order_view.html"><strong>ORD.685197</strong></a></td>
+                                                <td class="hidden-xs"><a href="javascript:void(0)">3 Products</a></td>
+                                                <td class="text-right hidden-xs"><strong>$318,00</strong></td>
+                                                <td><span class="label label-success">Delivered</span></td>
+                                                <td class="hidden-xs">Bank Wire</td>
+                                                <td class="hidden-xs text-center">17/06/2014</td>
+                                                <td class="text-center">
+                                                    <div class="btn-group btn-group-xs">
+                                                        <a href="page_ecom_order_view.html" data-toggle="tooltip" title="" class="btn btn-default" data-original-title="View"><i class="fa fa-eye"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-xs btn-danger" data-original-title="Delete"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center"><a href="page_ecom_order_view.html"><strong>ORD.685196</strong></a></td>
+                                                <td class="hidden-xs"><a href="javascript:void(0)">6 Products</a></td>
+                                                <td class="text-right hidden-xs"><strong>$264,00</strong></td>
+                                                <td><span class="label label-success">Delivered</span></td>
+                                                <td class="hidden-xs">Paypal</td>
+                                                <td class="hidden-xs text-center">27/01/2014</td>
+                                                <td class="text-center">
+                                                    <div class="btn-group btn-group-xs">
+                                                        <a href="page_ecom_order_view.html" data-toggle="tooltip" title="" class="btn btn-default" data-original-title="View"><i class="fa fa-eye"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-xs btn-danger" data-original-title="Delete"><i class="fa fa-times"></i></a>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <!-- END Info Content -->
+                                    <!-- END Orders Content -->
                                 </div>
-                                <!-- END Info Block -->
+                                <!-- END Orders Block -->
 
-                                <!-- Photos Block -->
+                                <!-- Products in Cart Block -->
                                 <div class="block">
-                                    <!-- Photos Title -->
-                                    <div class="block-title">
+                                    <!-- Products in Cart Title -->
+                                    <div class="block-title col-md-13">
                                         <div class="block-options pull-right">
-                                            <a href="javascript:void(0)" class="btn btn-alt btn-sm btn-default" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"></i></a>
+                                           
                                         </div>
-                                        <h2>Best <strong>Photos</strong> <small>&bull; <a href="javascript:void(0)">25 Albums</a></small></h2>
+                                        <h2><i class="fa fa-shopping-cart"></i> <strong>Calendario</strong> Escolar</h2>
+                                         <div id="calendar"></div>
                                     </div>
-                                    <!-- END Photos Title -->
+                                    <!-- END Products in Cart Title -->
 
-                                    <!-- Photos Content -->
-                                    <div class="gallery" data-toggle="lightbox-gallery">
-                                        <div class="row">
-                                            <div class="col-xs-6 col-sm-3">
-                                                <a href="img/placeholders/photos/photo12.jpg" class="gallery-link" title="Image Info">
-                                                    <img src="img/placeholders/photos/photo12.jpg" alt="image">
-                                                </a>
-                                            </div>
-                                            <div class="col-xs-6 col-sm-3">
-                                                <a href="img/placeholders/photos/photo15.jpg" class="gallery-link" title="Image Info">
-                                                    <img src="img/placeholders/photos/photo15.jpg" alt="image">
-                                                </a>
-                                            </div>
-                                            <div class="col-xs-6 col-sm-3">
-                                                <a href="img/placeholders/photos/photo3.jpg" class="gallery-link" title="Image Info">
-                                                    <img src="img/placeholders/photos/photo3.jpg" alt="image">
-                                                </a>
-                                            </div>
-                                            <div class="col-xs-6 col-sm-3">
-                                                <a href="img/placeholders/photos/photo4.jpg" class="gallery-link" title="Image Info">
-                                                    <img src="img/placeholders/photos/photo4.jpg" alt="image">
-                                                </a>
-                                            </div>
-                                            <div class="col-xs-6 col-sm-3">
-                                                <a href="img/placeholders/photos/photo5.jpg" class="gallery-link" title="Image Info">
-                                                    <img src="img/placeholders/photos/photo5.jpg" alt="image">
-                                                </a>
-                                            </div>
-                                            <div class="col-xs-6 col-sm-3">
-                                                <a href="img/placeholders/photos/photo6.jpg" class="gallery-link" title="Image Info">
-                                                    <img src="img/placeholders/photos/photo6.jpg" alt="image">
-                                                </a>
-                                            </div>
-                                            <div class="col-xs-6 col-sm-3">
-                                                <a href="img/placeholders/photos/photo20.jpg" class="gallery-link" title="Image Info">
-                                                    <img src="img/placeholders/photos/photo20.jpg" alt="image">
-                                                </a>
-                                            </div>
-                                            <div class="col-xs-6 col-sm-3">
-                                                <a href="img/placeholders/photos/photo17.jpg" class="gallery-link" title="Image Info">
-                                                    <img src="img/placeholders/photos/photo17.jpg" alt="image">
-                                                </a>
-                                            </div>
-                                            <div class="col-xs-6 col-sm-3">
-                                                <a href="img/placeholders/photos/photo14.jpg" class="gallery-link" title="Image Info">
-                                                    <img src="img/placeholders/photos/photo14.jpg" alt="image">
-                                                </a>
-                                            </div>
-                                            <div class="col-xs-6 col-sm-3">
-                                                <a href="img/placeholders/photos/photo9.jpg" class="gallery-link" title="Image Info">
-                                                    <img src="img/placeholders/photos/photo9.jpg" alt="image">
-                                                </a>
-                                            </div>
-                                            <div class="col-xs-6 col-sm-3">
-                                                <a href="img/placeholders/photos/photo11.jpg" class="gallery-link" title="Image Info">
-                                                    <img src="img/placeholders/photos/photo11.jpg" alt="image">
-                                                </a>
-                                            </div>
-                                            <div class="col-xs-6 col-sm-3">
-                                                <a href="img/placeholders/photos/photo10.jpg" class="gallery-link" title="Image Info">
-                                                    <img src="img/placeholders/photos/photo10.jpg" alt="image">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- END Photos Content -->
-                                </div>
-                                <!-- END Photos Block -->
+ 
 
-                                <!-- Friends Block -->
-                                <div class="block">
-                                    <!-- Friends Title -->
-                                    <div class="block-title">
-                                        <h2>New <strong>Friends</strong> <small>&bull; <a href="javascript:void(0)">450</a></small></h2>
-                                    </div>
-                                    <!-- END Friends Title -->
 
-                                    <!-- Friends Content -->
-                                    <div class="row text-center">
-                                        <div class="col-xs-4 col-sm-3 col-lg-2 block-section">
-                                            <a href="javascript:void(0)">
-                                                <img src="img/placeholders/avatars/avatar2.jpg" alt="image" class="img-circle" data-toggle="tooltip" title="Username">
-                                            </a>
-                                        </div>
-                                        <div class="col-xs-4 col-sm-3 col-lg-2 block-section">
-                                            <a href="javascript:void(0)">
-                                                <img src="img/placeholders/avatars/avatar14.jpg" alt="image" class="img-circle" data-toggle="tooltip" title="Username">
-                                            </a>
-                                        </div>
-                                        <div class="col-xs-4 col-sm-3 col-lg-2 block-section">
-                                            <a href="javascript:void(0)">
-                                                <img src="img/placeholders/avatars/avatar6.jpg" alt="image" class="img-circle" data-toggle="tooltip" title="Username">
-                                            </a>
-                                        </div>
-                                        <div class="col-xs-4 col-sm-3 col-lg-2 block-section">
-                                            <a href="javascript:void(0)">
-                                                <img src="img/placeholders/avatars/avatar14.jpg" alt="image" class="img-circle" data-toggle="tooltip" title="Username">
-                                            </a>
-                                        </div>
-                                        <div class="col-xs-4 col-sm-3 col-lg-2 block-section">
-                                            <a href="javascript:void(0)">
-                                                <img src="img/placeholders/avatars/avatar16.jpg" alt="image" class="img-circle" data-toggle="tooltip" title="Username">
-                                            </a>
-                                        </div>
-                                        <div class="col-xs-4 col-sm-3 col-lg-2 block-section">
-                                            <a href="javascript:void(0)">
-                                                <img src="img/placeholders/avatars/avatar11.jpg" alt="image" class="img-circle" data-toggle="tooltip" title="Username">
-                                            </a>
-                                        </div>
-                                        <div class="col-xs-4 col-sm-3 col-lg-2 block-section">
-                                            <a href="javascript:void(0)">
-                                                <img src="img/placeholders/avatars/avatar4.jpg" alt="image" class="img-circle" data-toggle="tooltip" title="Username">
-                                            </a>
-                                        </div>
-                                        <div class="col-xs-4 col-sm-3 col-lg-2 block-section">
-                                            <a href="javascript:void(0)">
-                                                <img src="img/placeholders/avatars/avatar9.jpg" alt="image" class="img-circle" data-toggle="tooltip" title="Username">
-                                            </a>
-                                        </div>
-                                        <div class="col-xs-4 col-sm-3 col-lg-2 block-section">
-                                            <a href="javascript:void(0)">
-                                                <img src="img/placeholders/avatars/avatar12.jpg" alt="image" class="img-circle" data-toggle="tooltip" title="Username">
-                                            </a>
-                                        </div>
-                                        <div class="col-xs-4 col-sm-3 col-lg-2 block-section">
-                                            <a href="javascript:void(0)">
-                                                <img src="img/placeholders/avatars/avatar14.jpg" alt="image" class="img-circle" data-toggle="tooltip" title="Username">
-                                            </a>
-                                        </div>
-                                        <div class="col-xs-4 col-sm-3 col-lg-2 block-section">
-                                            <a href="javascript:void(0)">
-                                                <img src="img/placeholders/avatars/avatar4.jpg" alt="image" class="img-circle" data-toggle="tooltip" title="Username">
-                                            </a>
-                                        </div>
-                                        <div class="col-xs-4 col-sm-3 col-lg-2 block-section">
-                                            <a href="javascript:void(0)">
-                                                <img src="img/placeholders/avatars/avatar15.jpg" alt="image" class="img-circle" data-toggle="tooltip" title="Username">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- END Friends Content -->
-                                </div>
-                                <!-- END Friends Block -->
-
-                                <!-- Twitter Block -->
-                                <div class="block full">
-                                    <!-- Twitter Title -->
-                                    <div class="block-title">
-                                        <div class="block-options pull-right">
-                                            <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"></i></a>
-                                        </div>
-                                        <h2>Twitter <strong>Feed</strong></h2>
-                                    </div>
-                                    <!-- END Twitter Title -->
-
-                                    <!-- Twitter Content -->
-                                    <div class="block-top block-content-mini-padding">
-                                        <form action="page_ready_user_profile.html" method="post" onsubmit="return false;">
-                                            <textarea id="profile-tweet" name="profile-tweet" class="form-control push-bit" rows="3" placeholder="Share something on Twitter.."></textarea>
-                                            <div class="clearfix">
-                                                <button type="submit" class="btn btn-sm btn-primary pull-right"><i class="fa fa-twitter"></i> Tweet</button>
-                                                <a href="javascript:void(0)" class="btn btn-link btn-icon" data-toggle="tooltip" data-placement="bottom" title="Add Location"><i class="fa fa-location-arrow"></i></a>
-                                                <a href="javascript:void(0)" class="btn btn-link btn-icon" data-toggle="tooltip" data-placement="bottom" title="Add Photo"><i class="fa fa-camera"></i></a>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <ul class="media-list">
-                                        <li class="media">
-                                            <a href="page_ready_user_profile.html" class="pull-left">
-                                                <img src="img/placeholders/avatars/avatar2.jpg" alt="Avatar" class="img-circle">
-                                            </a>
-                                            <div class="media-body">
-                                                <span class="text-muted pull-right"><small><em>30 min ago</em></small></span>
-                                                <a href="page_ready_user_profile.html"><strong>John Doe</strong></a>
-                                                <p>In hac <a href="javascript:void(0)">habitasse</a> platea dictumst. Proin ac nibh rutrum lectus rhoncus eleifend. <a href="javascript:void(0)" class="text-danger"><strong>#dev</strong></a></p>
-                                            </div>
-                                        </li>
-                                        <li class="media">
-                                            <a href="page_ready_user_profile.html" class="pull-left">
-                                                <img src="img/placeholders/avatars/avatar2.jpg" alt="Avatar" class="img-circle">
-                                            </a>
-                                            <div class="media-body">
-                                                <span class="text-muted pull-right"><small><em>3 hours ago</em></small></span>
-                                                <a href="page_ready_user_profile.html"><strong>John Doe</strong></a>
-                                                <p>Sed porttitor pretium venenatis. Suspendisse potenti. Aliquam quis ligula elit. Aliquam at orci ac neque semper dictum.</p>
-                                            </div>
-                                        </li>
-                                        <li class="media">
-                                            <a href="page_ready_user_profile.html" class="pull-left">
-                                                <img src="img/placeholders/avatars/avatar2.jpg" alt="Avatar" class="img-circle">
-                                            </a>
-                                            <div class="media-body">
-                                                <span class="text-muted pull-right"><small><em>yesterday</em></small></span>
-                                                <a href="page_ready_user_profile.html"><strong>John Doe</strong></a>
-                                                <p>In hac habitasse platea dictumst. Proin ac nibh rutrum <a href="javascript:void(0)">lectus</a> rhoncus eleifend <a href="javascript:void(0)" class="text-danger"><strong>#design</strong></a></p>
-                                            </div>
-                                        </li>
-                                        <li class="media">
-                                            <a href="page_ready_user_profile.html" class="pull-left">
-                                                <img src="img/placeholders/avatars/avatar2.jpg" alt="Avatar" class="img-circle">
-                                            </a>
-                                            <div class="media-body">
-                                                <span class="text-muted pull-right"><small><em>2 days ago</em></small></span>
-                                                <a href="page_ready_user_profile.html"><strong>John Doe</strong></a>
-                                                <p>Donec lacinia venenatis metus at bibendum? In hac habitasse platea dictumst. Proin ac nibh rutrum lectus rhoncus eleifend.</p>
-                                            </div>
-                                        </li>
-                                        <li class="media">
-                                            <a href="page_ready_user_profile.html" class="pull-left">
-                                                <img src="img/placeholders/avatars/avatar2.jpg" alt="Avatar" class="img-circle">
-                                            </a>
-                                            <div class="media-body">
-                                                <span class="text-muted pull-right"><small><em>3 days ago</em></small></span>
-                                                <a href="page_ready_user_profile.html"><strong>John Doe</strong></a>
-                                                <p>In hac habitasse platea dictumst. Proin ac nibh rutrum lectus rhoncus eleifend.</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <!-- END Twitter Content -->
-                                </div>
-                                <!-- END Twitter Block -->
+                               
+                                <!-- END Private Notes Block -->
                             </div>
-                            <!-- END Second Column -->
                         </div>
-                        <!-- END User Profile Content -->
+                        <!-- END Customer Content -->
                     </div>
                     <!-- END Page Content -->
 
@@ -881,18 +435,8 @@
         <!-- END User Settings -->
 
         <!-- jQuery, Bootstrap.js, jQuery plugins and Custom JS code -->
-        <script src="js/vendor/jquery.min.js"></script>
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/app.js"></script>
 
-        <!-- Google Maps API Key (you will have to obtain a Google Maps API key to use Google Maps) -->
-        <!-- For more info please have a look at https://developers.google.com/maps/documentation/javascript/get-api-key#key -->
-        <script src="//maps.googleapis.com/maps/api/js?key="></script>
-        <script src="js/helpers/gmaps.min.js"></script>
-
-        <!-- Load and execute javascript code used only in this page -->
-        <script src="js/pages/readyProfile.js"></script>
-        <script>$(function(){ ReadyProfile.init(); });</script>
+        <script src="<?php echo base_url();?>assets/js/pages/compCalendar.js"></script>
+        <script>$(function(){ CompCalendar.init(); });</script>
     </body>
 </html>

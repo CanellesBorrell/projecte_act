@@ -1,0 +1,22 @@
+Modo de juego. -> Piano, Solfeo y lenguaje, Orquestra. ESTATICOS.
+
+id_modo
+nombre del modo
+descripcion de cada modo.
+
+Dentro de cada Modo de Juego tenemos Niveles NO ESTATICO.
+
+id_nivel
+id_modo
+nivel
+descripcion
+precio
+
+
+Dentro de cada Nivel tenemos Lecciones. NO ESTATICO.
+
+Dentro de cada leccion hay partituras. NO ESTATICO.
+
+Tabla de licencias Usuario.
+
+CONTAMOS 7 TABLAS
