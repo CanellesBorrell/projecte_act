@@ -70,7 +70,9 @@ class Asignaturas extends CI_Controller {
 		$alumnos = $this->input->post('a-alumnos');
 		for ($i=0;$i<count($alumnos);$i++)    {         
 			$this->modelo_asignaturas->insertarAAsignatura($id,$alumnos[$i]);
+			$this->modelo_asignaturas->insertarAGrupo($id,$alumnos[$i]);
 		} 
+
 		redirect('asignaturas');
 	}
 

@@ -29,10 +29,16 @@ class Modelo_grupos extends CI_Model{
     }
 
     function insertarGAsignatura($id,$asignatures) {
-        $data = array(
-            'id_grupo'=> $id,
-            'id_asignatura' => $asignatures);
-        $this->db->insert('grupos_asignaturas', $data);
+        $this->db->select('id_asignatura');
+        $this->db->from('grupos_asignaturas');
+        $this->db->where('id_asignatura',$asignatures);
+        $query = $this->db->get();
+            if($query -> num_rows() == 0) { 
+            $data = array(
+                'id_grupo'=> $id,
+                'id_asignatura' => $asignatures);
+            $this->db->insert('grupos_asignaturas', $data);
+        }
     }
 
     function getAsignaturasGrupo($id) {

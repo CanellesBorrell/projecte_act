@@ -39,27 +39,38 @@ class Modelo_asignaturas extends CI_Model{
     }
 
     function insertarAAsignatura($id,$alumnos) {
-        $data = array(
-            'id_usuario'=> $alumnos,
-            'id_asignatura' => $id);
-        $this->db->insert('Usuarios_Asignaturas', $data);
-        $id_grupo = getGrupoAsignatura($id_asignatura);
-        $estadentro = mysql_num_rows(getGrupoAsignatura($id_asignatura));
-        if($estadentro != 0) { 
+        $this->db->select('id_usuario');
+        $this->db->from('Usuarios_Asignaturas');
+        $this->db->where('id_usuario',$alumnos);
+        $query = $this->db->get();
+        if($query -> num_rows() == 0) { 
+            $data = array(
+                'id_usuario'=> $alumnos,
+                'id_asignatura' => $id);
+            $this->db->insert('Usuarios_Asignaturas', $data);
+        }
+        
+        
+    }
+
+    function insertarAGrupo($id, $alumnos) {
+        $this->db->select('id_grupo');
+        $this->db->from('grupos_asignaturas');
+        $this->db->where('id_asignatura',$id);
+        $query2 = $this->db->get();
+        
+        $this->db->select('id_usuario');
+        $this->db->from('usuarios_grupos');
+        $this->db->where('id_usuario',$alumnos);
+        $query = $this->db->get();
+        if($query -> num_rows() == 0) { 
+            $id_grupo = $query2->row()->id_grupo;
             $datos = array(
                 'id_grupo' => $id_grupo,
                 'id_usuario' => $alumnos);
             $this->db->insert('usuarios_grupos',$datos);
         }
-        
-    }
 
-    function getGrupoAsignatura($id_asignatura) {
-        $this->db->select('id_grupo');
-        $this->db->from('grupos_asignaturas');
-        $this->db->where('id_asignatura',$id_asignatura);
-        $query = $this->db->get();
-        return $query->result_array()->row()->id_grupo;
     }
 
     function getUsuariosAsignatura($id) {  // Filtramos todos los usuarios ligados a una asignatura
