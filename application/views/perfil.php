@@ -254,7 +254,7 @@
                                     <!-- Orders Title -->
                                     <div class="block-title">
                                         <div class="block-options pull-right">
-                                            <span class="label label-success"><strong>$ 2125,00</strong></span>
+                                           
                                         </div>
                                         <h2><i class="fa fa-truck"></i> <strong>Tareas </strong>pendientes</h2>
                                     </div>
@@ -324,7 +324,79 @@
                                     <!-- END Orders Content -->
                                 </div>
                                 <!-- END Orders Block -->
+                                <div class="block">
+                                    <!-- Orders Title -->
+                                    <div class="block-title">
+                                        <div class="block-options pull-right">
+                                           
+                                        </div>
+                                        <h2><i class="fa fa-truck"></i> <strong>Asignaturas </strong>Matriculadas</h2>
+                                    </div>
+                                    <!-- END Orders Title -->
 
+                                    <!-- Orders Content -->
+                                    <table class="table table-bordered table-striped table-vcenter">
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center" style="width: 100px;"><a href="page_ecom_order_view.html"><strong>ORD.685199</strong></a></td>
+                                                <td class="hidden-xs" style="width: 15%;"><a href="javascript:void(0)">5 Products</a></td>
+                                                <td class="text-right hidden-xs" style="width: 10%;"><strong>$585,00</strong></td>
+                                                <td><span class="label label-warning">Processing</span></td>
+                                                <td class="hidden-xs">Paypal</td>
+                                                <td class="hidden-xs text-center">16/11/2014</td>
+                                                <td class="text-center" style="width: 70px;">
+                                                    <div class="btn-group btn-group-xs">
+                                                        <a href="page_ecom_order_view.html" data-toggle="tooltip" title="" class="btn btn-default" data-original-title="View"><i class="fa fa-eye"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-xs btn-danger" data-original-title="Delete"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center"><a href="page_ecom_order_view.html"><strong>ORD.685198</strong></a></td>
+                                                <td class="hidden-xs"><a href="javascript:void(0)">2 Products</a></td>
+                                                <td class="text-right hidden-xs"><strong>$958,00</strong></td>
+                                                <td><span class="label label-info">For delivery</span></td>
+                                                <td class="hidden-xs">Credit Card</td>
+                                                <td class="hidden-xs text-center">03/10/2014</td>
+                                                <td class="text-center">
+                                                    <div class="btn-group btn-group-xs">
+                                                        <a href="page_ecom_order_view.html" data-toggle="tooltip" title="" class="btn btn-default" data-original-title="View"><i class="fa fa-eye"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-xs btn-danger" data-original-title="Delete"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center"><a href="page_ecom_order_view.html"><strong>ORD.685197</strong></a></td>
+                                                <td class="hidden-xs"><a href="javascript:void(0)">3 Products</a></td>
+                                                <td class="text-right hidden-xs"><strong>$318,00</strong></td>
+                                                <td><span class="label label-success">Delivered</span></td>
+                                                <td class="hidden-xs">Bank Wire</td>
+                                                <td class="hidden-xs text-center">17/06/2014</td>
+                                                <td class="text-center">
+                                                    <div class="btn-group btn-group-xs">
+                                                        <a href="page_ecom_order_view.html" data-toggle="tooltip" title="" class="btn btn-default" data-original-title="View"><i class="fa fa-eye"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-xs btn-danger" data-original-title="Delete"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center"><a href="page_ecom_order_view.html"><strong>ORD.685196</strong></a></td>
+                                                <td class="hidden-xs"><a href="javascript:void(0)">6 Products</a></td>
+                                                <td class="text-right hidden-xs"><strong>$264,00</strong></td>
+                                                <td><span class="label label-success">Delivered</span></td>
+                                                <td class="hidden-xs">Paypal</td>
+                                                <td class="hidden-xs text-center">27/01/2014</td>
+                                                <td class="text-center">
+                                                    <div class="btn-group btn-group-xs">
+                                                        <a href="page_ecom_order_view.html" data-toggle="tooltip" title="" class="btn btn-default" data-original-title="View"><i class="fa fa-eye"></i></a>
+                                                        <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-xs btn-danger" data-original-title="Delete"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- END Orders Content -->
+                                </div>
                                 <!-- Products in Cart Block -->
                                 <div class="block">
                                     <!-- Products in Cart Title -->
@@ -437,6 +509,6 @@
         <!-- jQuery, Bootstrap.js, jQuery plugins and Custom JS code -->
 
         <script src="<?php echo base_url();?>assets/js/pages/compCalendar.js"></script>
-        <script>$(function(){ CompCalendar.init(); });</script>
+        <script>CompCalendar.init();</script>
     </body>
 </html>

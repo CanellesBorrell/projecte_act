@@ -309,7 +309,7 @@
                             
 
                             <div class="table-responsive">
-                                <table id="POLLA" class="table table-vcenter table-condensed table-bordered">
+                                <table id="datatables_tabla" class="table table-vcenter table-condensed table-bordered">
                                     <thead>
                                         <tr>
                                             <th class="text-center">Nombre</th>
@@ -446,7 +446,7 @@
         <!-- Load and execute javascript code used only in this page -->
        
         <script src="<?php echo base_url();?>assets/js/pages/tablesDatatables.js"></script>
-        <script>$(function(){ TablesDatatables.init(); });</script>
+       <script>TablesDatatables.init();</script>
         
     </body>
 

@@ -27,22 +27,17 @@
         <link rel="stylesheet" href="<?php echo base_url();?>assets/css/themes.css">
         <!-- END Stylesheets -->
 
-        <!-- Modernizr (browser feature detection library) -->
+    
         <script src="<?php echo base_url();?>assets/js/vendor/modernizr.min.js"></script>
-
-          <script src="<?php echo base_url();?>assets/js/vendor/jquery.min.js"></script>
+        <script src="<?php echo base_url();?>assets/js/vendor/jquery.min.js"></script>
         <script src="<?php echo base_url();?>assets/js/vendor/bootstrap.min.js"></script>
         <script src="<?php echo base_url();?>assets/js/plugins.js"></script>
         <script src="<?php echo base_url();?>assets/js/app.js"></script>
-
-        <!-- Google Maps API Key (you will have to obtain a Google Maps API key to use Google Maps) -->
-        <!-- For more info please have a look at https://developers.google.com/maps/documentation/javascript/get-api-key#key -->
         <script src="//maps.googleapis.com/maps/api/js?key="></script>
         <script src="<?php echo base_url();?>assets/js/helpers/gmaps.min.js"></script>
-
-        <!-- Load and execute javascript code used only in this page -->
         <script src="<?php echo base_url();?>assets/js/pages/index.js"></script>
-        <script>$(function(){ Index.init(); });</script>
         <script src="<?php echo base_url();?>assets/js/pages/formsValidation.js"></script>
-        <script>$(function(){ FormsValidation.init(); });</script>
+        <script>FormsValidation.init();</script>
+        <script>Index.init();</script>
         
+       

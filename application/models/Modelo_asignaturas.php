@@ -58,13 +58,13 @@ class Modelo_asignaturas extends CI_Model{
         $this->db->from('grupos_asignaturas');
         $this->db->where('id_asignatura',$id);
         $query2 = $this->db->get();
-        
-        $this->db->select('id_usuario');
+        $id_grupo = $query2->row()->id_grupo;
+        $this->db->select('id_usuario, id_grupo');
         $this->db->from('usuarios_grupos');
-        $this->db->where('id_usuario',$alumnos);
+        $this->db->where('id_grupo',$id_grupo);
+        $this->db->where('id_usuario',$alumnos); 
         $query = $this->db->get();
         if($query -> num_rows() == 0) { 
-            $id_grupo = $query2->row()->id_grupo;
             $datos = array(
                 'id_grupo' => $id_grupo,
                 'id_usuario' => $alumnos);
