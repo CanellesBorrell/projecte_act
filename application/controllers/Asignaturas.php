@@ -7,6 +7,7 @@ class Asignaturas extends CI_Controller {
       $this->load->library('form_validation');  // La llibreria per fer els camps requerits
       $this->load->model('modelo_asignaturas');
       $this->load->model('modelo_usuarios');
+      $this->load->model('modelo_tareas');
     }
 
     // Cargamos la pagina con los datos recibidos de la base de datos
@@ -47,6 +48,27 @@ class Asignaturas extends CI_Controller {
 			$this->modelo_asignaturas->insertarAsignatura($asignatura);
 			redirect('asignaturas');
 		//}
+	}
+	
+	public function tareas($idasignatura) {
+		if($this->session->userdata('logged_in')){
+			$sesio = $this->session->userdata('logged_in');
+			$data = $this->modelo_tareas->getTarea($idasignatura);
+			$dades = array(
+				'sesio' => $sesio,
+				'data' => $data);
+				if($data == null) {
+					$this->load->view('tareas', $dades);	
+				}
+				else {
+					$this->load->view('tareas', $dades);
+				}
+			}
+			
+		else{
+			redirect('login', 'refresh');
+		}
+		
 	}
 
 	public function eliminarAsignaturas($id) {

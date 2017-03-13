@@ -7,18 +7,18 @@ class modelo_tareas extends CI_Model{
         $this->load->database();
         
     }
-    function getTarea() {
-    	$this->db->select('id_tarea,id_asignatura,Nombre,Archivo,Data_vencimiento,Profesor_asignado,Comentario');
+    function getTarea($idasignatura) {
+    	$this->db->select('id_tarea,id_asignatura,Nombre,Archivo,Data_vencimiento,Comentario');
+    	$this->db->where('id_asignatura', $idasignatura);
         $query = $this->db->get('Tareas');
         return $query->result_array();
     }
 
-    function insertarTarea($nombre, $archivo, $datavencimiento, $profesorassig, $comentario) {
+    function insertarTarea($nombre, $asignatura, $archivo, $datavencimiento, $comentario) {
          $data = array(
             'Nombre'=> $nombre,
             'Archivo'=> $archivo,
             'Data_vencimiento'=> $datavencimiento,
-            'Profesor_asignado'=> $profesorassig,
             'Comentario'=> $comentario);
             $this->db->insert('Tareas', $data);
     }

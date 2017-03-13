@@ -9,12 +9,23 @@ class Tareas extends CI_Controller {
     } 
 
     	public function index() {
-		$data = $this->modelo_tareas->getTarea();
-		if($data == null) {
-			$this->load->view('tareas');	
-		}
-		else {
-			$this->load->view('tareas', $data);
+		
+		if($this->session->userdata('logged_in')){
+			$sesio = $this->session->userdata('logged_in');
+			$data = $this->modelo_tareas->getTarea();
+			$dades = array(
+				'sesio' => $sesio,
+				'data' => $data);
+				if($data == null) {
+					$this->load->view('tareas', $dades);	
+				}
+				else {
+					$this->load->view('tareas', $dades);
+				}
+			}
+			
+		else{
+			redirect('login', 'refresh');
 		}
 	}
 
@@ -100,9 +111,11 @@ class Tareas extends CI_Controller {
 		else {
 			$this->session->set_flashdata('success_upload','Pujat Correcament');
 			$nom = $this->upload->file_name;
-			$file_name = base_url()."partitures/".$this->upload->file_name;
-			$this->modelo_tareas->insertPartitures($nom, $file_name);
-			redirect('Tareas/tarea');
+			$fecha= "22/2/04";
+			$comentario ="a lo jordi varas fesla perfecta o suspendras";
+			$file_name = base_url().$path."/".$this->upload->file_name;
+			$this->modelo_tareas->insertarTarea($nom, $idasignatura, $file_name, $fecha, $comentario);
+			redirect('Tareas');
 			}
 	}
 	else{
