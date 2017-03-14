@@ -144,4 +144,14 @@ class Modelo_usuarios extends CI_Model{
         $query = $this->db->get();
         return $query->result_array();
     }
+
+
+    function getAsignaturasAlumno($id_usuario) {
+        $this->db->select('g.id_Usuarios_Asignaturas, g.id_asignatura, g.id_usuario, a.Asignatura ');
+        $this->db->from('Usuarios_Asignaturas g');
+        $this->db->join('Asignaturas a', 'g.id_asignatura = a.id_asignatura');
+        $this->db->where('g.id_usuario',$id_usuario);
+        $query = $this->db->get();
+        return $query->result_array(); 
+    }
 }
