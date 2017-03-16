@@ -250,10 +250,31 @@
                                     <!-- END Upload Title -->
 
                                     <!-- Upload Content -->
-                                    <input type="file" name="Tareas" value="Envia" size="50" /></p>
+                                    <?php echo form_open_multipart('tareas/DoUpload/4', 'class="dropzone"')?>
+                                    <div class="input-group">
+										<span class="input-group-addon"><i class="gi gi-envelope"></i></span>
+										<input type="text" id="nombre-tarea" name="nombre-tarea" class="form-control input-lg" placeholder="Nombre de la tarea">
+					                </div>
+					                <br>
+					                <div class="input-group">
+										<span class="input-group-addon"><i class="gi gi-envelope"></i></span>
+										<input type="text" id="Fecha" name="Fecha" class="form-control input-datepicker" data-date-format="yyyy-mm-dd" placeholder="Fecha límite (yyyy-mm-dd)">
+                                    </div>
+                                    <br>
+                                    <div class="input-group">
+										<label for="comment">Comment:</label>
+										<textarea class="form-control" rows="5" id="comment"></textarea>     
+									</div>
+									<br>
+                                    
+                                    
+                                                     
+                                    <!--<input type="file" name="Tareas" value="Envia" size="50" /></p> -->
+                                    
+                                    <br>
 									<p><button type="submit" class="btn btn-success" name="foto">Acceptar</button></p>
+                                    
 									<?php echo form_close();?> <?php if($this->session->flashdata('success_upload'));?>
-                                    <form action="page_ready_files.html" class="dropzone"></form>
                                     <!-- END Upload Content -->
                                 </div>
                                 <!-- END Upload Block -->
