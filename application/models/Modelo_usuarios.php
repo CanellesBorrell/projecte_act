@@ -146,7 +146,7 @@ class Modelo_usuarios extends CI_Model{
     }
 
 
-    function getAsignaturasAlumno($id_usuario) {
+    function getAsignaturasAlumno($id_usuario) {  // Hola
         $this->db->select('g.id_Usuarios_Asignaturas, g.id_asignatura, g.id_usuario, a.Asignatura ');
         $this->db->from('Usuarios_Asignaturas g');
         $this->db->join('Asignaturas a', 'g.id_asignatura = a.id_asignatura');

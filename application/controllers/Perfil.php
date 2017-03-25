@@ -8,7 +8,7 @@ class Perfil extends CI_Controller {
       $this->load->model('modelo_usuarios');
     }
 
-  	public function index() {
+  	public function index() {  // Hola
   		if($this->session->userdata('logged_in')){
 			$sesio = $this->session->userdata('logged_in');
 			$id_alumno = $sesio['id_usuario'];
