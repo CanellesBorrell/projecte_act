@@ -99,13 +99,11 @@
                                             
                                             <button class="btn btn-sm btn-default" onclick="$('#modal-agrupar').modal('show'); editar(<?php echo $listarasignaturas['id_asignatura']; ?>);"><i class="fa fa-wrench"></i></button>
                                           
-<<<<<<< HEAD
+
                                             <a href="<?php echo base_url()?>index.php/tareas/upload/DoUpload/<?php echo $listarasignaturas['id_asignatura']; ?>"><button class="btn btn-sm btn-info"><i class="fa fa-upload"></i></button></a>
 
-=======
 											<!--  <a href="<?php echo base_url()?>index.php/tareas/upload/DoUpload/<?php echo $listarasignaturas['id_asignatura']; ?>"><button class="btn btn-sm btn-info"><i class="fa fa-upload"></i></button></a> -->
                                             <a href="<?php echo base_url()?>index.php/asignaturas/tareas/<?php echo $listarasignaturas['id_asignatura']; ?>"><button class="btn btn-sm btn-info"><i class="fa fa-upload"></i></button></a>
->>>>>>> daa7b536c5ea5869ad7cab95e33a7b89171e9a0f
                                             <a href="<?php echo base_url()?>index.php/asignaturas/eliminarAsignaturas/<?php echo $listarasignaturas['id_asignatura']; ?>"><button class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button></a>
                                         </td>
                                     </tr>
