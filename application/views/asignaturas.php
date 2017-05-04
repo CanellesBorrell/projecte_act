@@ -99,8 +99,15 @@
                                             
                                             <button class="btn btn-sm btn-default" onclick="$('#modal-agrupar').modal('show'); editar(<?php echo $listarasignaturas['id_asignatura']; ?>);"><i class="fa fa-wrench"></i></button>
                                           
+<<<<<<< HEAD
 
                                            
+=======
+
+                                            <a href="<?php echo base_url()?>index.php/tareas/upload/DoUpload/<?php echo $listarasignaturas['id_asignatura']; ?>"><button class="btn btn-sm btn-info"><i class="fa fa-upload"></i></button></a>
+
+											<!--  <a href="<?php echo base_url()?>index.php/tareas/upload/DoUpload/<?php echo $listarasignaturas['id_asignatura']; ?>"><button class="btn btn-sm btn-info"><i class="fa fa-upload"></i></button></a> -->
+>>>>>>> 0b0280e221e65126b8c642a9d1819d4d677fa723
                                             <a href="<?php echo base_url()?>index.php/asignaturas/tareas/<?php echo $listarasignaturas['id_asignatura']; ?>"><button class="btn btn-sm btn-info"><i class="fa fa-upload"></i></button></a>
                                             <a href="<?php echo base_url()?>index.php/asignaturas/eliminarAsignaturas/<?php echo $listarasignaturas['id_asignatura']; ?>"><button class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button></a>
                                         </td>

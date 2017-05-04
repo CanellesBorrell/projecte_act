@@ -250,7 +250,7 @@
                                     <!-- END Upload Title -->
 
                                     <!-- Upload Content -->
-                                    <?php echo form_open_multipart('tareas/DoUpload/4', 'class="dropzone"')?>
+                                    <form action="<?php echo site_url('tareas/DoUpload/4'); ?>">
                                     <div class="input-group">
 										<span class="input-group-addon"><i class="gi gi-envelope"></i></span>
 										<input type="text" id="nombre-tarea" name="nombre-tarea" class="form-control input-lg" placeholder="Nombre de la tarea">
@@ -266,15 +266,12 @@
 										<textarea class="form-control" rows="5" id="comment"></textarea>     
 									</div>
 									<br>
-                                    
-                                    
-                                                     
-                                    <!--<input type="file" name="Tareas" value="Envia" size="50" /></p> -->
-                                    
+                                    <label for="file"> Selecciona un fitxer</label>
+										<p>
+										<input type="file" name="Tareas" value="Envia" size="50" /></p>
                                     <br>
 									<p><button type="submit" class="btn btn-success" name="foto">Acceptar</button></p>
-                                    
-									<?php echo form_close();?> <?php if($this->session->flashdata('success_upload'));?>
+									</form>
                                     <!-- END Upload Content -->
                                 </div>
                                 <!-- END Upload Block -->
