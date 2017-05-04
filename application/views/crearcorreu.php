@@ -14,7 +14,7 @@
 
         <!-- Icons -->
         <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
-         <?php include('imports.php'); ?>
+        <?php include('imports.php'); ?>
     </head>
     <body>
         <!-- Page Wrapper -->
@@ -70,11 +70,11 @@
             -->
             <div id="page-container" class="sidebar-partial sidebar-visible-lg sidebar-no-animations">
                 <!-- Alternative Sidebar -->
-               
+                
                 <!-- END Alternative Sidebar -->
-
+                    <?php include('menu.php'); ?>
                 <!-- Main Sidebar -->
-               <?php include('menu.php'); ?>
+                
                 <!-- END Main Sidebar -->
 
                 <!-- Main Container -->
@@ -94,15 +94,38 @@
                             'header-fixed-bottom'   has to be added on #page-container only if the class 'navbar-fixed-bottom' was added
                     -->
                     <header class="navbar navbar-default">
+                        <!-- Left Header Navigation -->
                         <ul class="nav navbar-nav-custom">
+                            <!-- Main Sidebar Toggle Button -->
                             <li>
                                 <a href="javascript:void(0)" onclick="App.sidebar('toggle-sidebar');this.blur();">
                                     <i class="fa fa-bars fa-fw"></i>
                                 </a>
                             </li>
+                            <!-- END Main Sidebar Toggle Button -->
 
+                            <!-- Template Options -->
+                            <!-- Change Options functionality can be found in js/app.js - templateOptions() -->
+                            
+                            <!-- END Template Options -->
                         </ul>
+                        <!-- END Left Header Navigation -->
 
+                        <!-- Search Form -->
+                       
+                        <!-- END Search Form -->
+
+                        <!-- Right Header Navigation -->
+                        <ul class="nav navbar-nav-custom pull-right">
+                            <!-- Alternative Sidebar Toggle Button -->
+                            
+                            <!-- END Alternative Sidebar Toggle Button -->
+
+                            <!-- User Dropdown -->
+                           
+                            <!-- END User Dropdown -->
+                        </ul>
+                        <!-- END Right Header Navigation -->
                     </header>
                     <!-- END Header -->
 
@@ -111,13 +134,13 @@
                         <!-- Inbox Header -->
                         <div class="content-header">
                             <div class="header-section">
-                                <h1><i class="gi gi-envelope"></i> Inbox<br><small>Your Message Center</small></h1>
+                                <h1><i class="gi gi-pencil"></i> Mensajeria <br><small>Escribe tu mensaje</small></h1>
                             </div>
                         </div>
                         <ul class="breadcrumb breadcrumb-top">
                             <li>Pages</li>
                             <li>Message Center</li>
-                            <li><a href="">Inbox</a></li>
+                            <li><a href="">Compose Message</a></li>
                         </ul>
                         <!-- END Inbox Header -->
 
@@ -133,22 +156,22 @@
                                             <a href="javascript:void(0)" class="btn btn-alt btn-sm btn-default" data-toggle="tooltip" title="Refresh"><i class="fa fa-refresh"></i></a>
                                         </div>
                                         <div class="block-options pull-left">
-                                            <a href="<?php echo base_url();?>index.php/mensajes/escriureCorreu" class="btn btn-alt btn-sm btn-default"><i class="fa fa-pencil"></i> Compose Message</a>
+                                            <a  <a href="<?php echo base_url();?>index.php/mensajes/escriureCorreu" class="btn btn-alt btn-sm btn-default"><i class="fa fa-pencil"></i> Compose Message</a>
                                         </div>
                                     </div>
                                     <!-- END Menu Title -->
 
                                     <!-- Menu Content -->
                                     <ul class="nav nav-pills nav-stacked">
-                                        <li class="active">
+                                        <li>
                                             <a href="page_ready_inbox.html">
-                                                
-                                                <i class="fa fa-angle-right fa-fw"></i> <strong>Bandeja de entrada</strong>
+                                                <span class="badge pull-right">5</span>
+                                                <i class="fa fa-angle-right fa-fw"></i> <strong>Inbox</strong>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="javascript:void(0)">
-                                                <i class="fa fa-angle-right fa-fw"></i> <strong>Enviados</strong>
+                                                <i class="fa fa-angle-right fa-fw"></i> <strong>Sent</strong>
                                             </a>
                                         </li>
                                     </ul>
@@ -156,103 +179,65 @@
                                 </div>
                                 <!-- END Menu Block -->
 
-
-                                <!-- Account Stats Block -->
-                              
-                                <!-- END Account Status Block -->
-
-                                <!-- Online Users Block -->
                                 
-                                <!-- END Online Users Block -->
+
+                        
+                                
+
+                                
                             </div>
                             <!-- END Inbox Menu -->
 
-                            <!-- Messages List -->
+                            <!-- Compose Message List -->
                             <div class="col-sm-8 col-lg-9">
-                                <!-- Messages List Block -->
+                                <!-- Compose Message Block -->
                                 <div class="block">
-                                    <!-- Messages List Title -->
+                                    <!-- Compose Message Title -->
                                     <div class="block-title">
-                                        <div class="block-options pull-right">
-                                            <a href="javascript:void(0)" class="btn btn-alt btn-sm btn-default" data-toggle="tooltip" title="Settings"><i class="fa fa-cog"></i></a>
-                                        </div>
-                                        <h2>Bandeja de <strong>Entrada</strong></h2>
+                                        
+                                        <h2>Compose <strong>Message</strong></h2>
                                     </div>
-                                    <!-- END Messages List Title -->
+                                    <!-- END Compose Message Title -->
 
-                                    <!-- Messages List Content -->
-                                    <div class="table-responsive">
-                                        <table class="table table-hover table-vcenter" id="taula">
-                                            <thead>
-                                                <tr>
-                                                    <td class="text-center">
-                                                        <input type="checkbox" id="checkbox-all" name="checkbox-all">
-                                                    </td>
-                                                    <td colspan="3">
-                                                        <div class="btn-group btn-group-sm">
-                                                            <a href="javascript:void(0)" class="btn btn-default" data-toggle="tooltip" title="Archive Selected"><i class="fa fa-briefcase"></i></a>
-                                                            <a href="javascript:void(0)" class="btn btn-default" data-toggle="tooltip" title="Star Selected"><i class="fa fa-star"></i></a>
-                                                            <a href="javascript:void(0)" class="btn btn-default" data-toggle="tooltip" title="Delete Selected"><i class="fa fa-times"></i></a>
-                                                        </div>
-                                                    </td>
-                                                   
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <!-- Use the first row as a prototype for your column widths -->
-                                                 <?php foreach($recibidos as $correosRecibidos){ ?>
-                                                <tr>
-                                                    
-                                                    <td class="text-center" style="width: 30px;" >
-                                                    <input type="hidden" id="id_polla" value="<?php echo $correosRecibidos['id_mensaje']; ?>"/>
-                                                        <input type="checkbox" id="checkbox1" name="checkbox1">
-                                                    </td>
-                                                    <td class="text-center" style="width: 30px;">
-                                                        <a href="javascript:void(0)" class="text-muted msg-fav-btn"><i class="fa fa-star-o"></i></a>
-                                                    </td>
-                                                    <td class="text-center" style="width: 30px;">
-                                                        <a href="javascript:void(0)" class="text-success msg-read-btn"><i class="fa fa-circle"></i></a>
-                                                    </td>
-                                                    <td style="width: 20%;"><?php echo $correosRecibidos['Remitente']; ?></td>
-                                                    <td>
-                                                        <strong><?php echo $correosRecibidos['Concepto']; ?></strong>
-                                                    </td>
-                                                    <td class="text-center" style="width: 30px;">
-                                                       <!-- <i class="fa fa-paperclip"></i>-->
-                                                    </td>
-                                                    <td class="text-right" style="width: 90px;"><em><?php echo $correosRecibidos['FechaHora']; ?></em></td>
-                                                </a></tr>
-                                                <?php } // Cerramos foreach ?>  
-                                                <tr>
-                                                 <a href="page_ready_inbox_message.html">
-                                                    <td class="text-center">
-                                                        <input type="checkbox" id="checkbox6" name="checkbox6">
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <a href="javascript:void(0)" class="text-muted msg-fav-btn"><i class="fa fa-star-o"></i></a>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <a href="javascript:void(0)" class="text-muted msg-read-btn"><i class="fa fa-circle"></i></a>
-                                                    </td>
-                                                    <td>Stephen Estrada</td>
-                                                    <td>
-                                                        <span class="label label-warning">Friends</span>
-                                                        <strong>The Trip was amazing!</strong></a>
-                                                        <span class="text-muted">I wish you could come with us at..</span>
-                                                    </td>
-                                                    <td>
-                                                        <i class="fa fa-paperclip"></i>
-                                                    </td>
-                                                    <td class="text-right"><em>55 min ago</em></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <!-- END Messages List Content -->
+                                    <!-- Compose Message Content -->
+                                    <form action="enviarMensaje" method="post" class="form-horizontal form-bordered">
+                                        <input type="hidden" value="<?php echo $sesio['Email'];?>" name="emisor">
+                                        <div class="form-group">
+                                            <label class="col-md-3 col-lg-2 control-label" for="compose-to">To</label>
+                                            <div class="col-md-9 col-lg-10">
+                                                <select id="receptores" name="receptores[]" class="select-chosen" data-placeholder="Selecciona los usuarios" style="width: 250px;" multiple>
+                                                    <?php foreach($usuarios as $llistarusuarios){ ?>
+                                                        <option value="<?php echo $llistarusuarios['Email']; ?>"><?php echo $llistarusuarios['Nombre']; ?> <?php echo $llistarusuarios['Apellidos']; ?></option>
+
+                                                   <?php } ?>
+                                                        
+                                                    </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 col-lg-2 control-label" for="concepto">Concepto</label>
+                                            <div class="col-md-9 col-lg-10">
+                                                <input type="text" id="concepto" name="concepto" class="form-control form-control-borderless" placeholder="Your subject..">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 col-lg-2 control-label" for="mensaje">Mensaje</label>
+                                            <div class="col-md-9 col-lg-10">
+                                                <textarea id="mensaje" name="mensaje" rows="20" class="form-control" placeholder="Your message.."></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group form-actions">
+                                            <div class="col-md-9 col-md-offset-3 col-lg-10 col-lg-offset-2">
+                                                <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-share"></i> Send</button>
+                                               
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- END Compose Message Content -->
                                 </div>
-                                <!-- END Messages List Block -->
+                                <!-- END Compose Message Block -->
                             </div>
-                            <!-- END Messages List -->
+                            <!-- END Compose Message -->
                         </div>
                         <!-- END Inbox Content -->
                     </div>
@@ -345,24 +330,13 @@
         <!-- END User Settings -->
 
         <!-- jQuery, Bootstrap.js, jQuery plugins and Custom JS code -->
-      
+        <script src="js/vendor/jquery.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/app.js"></script>
 
         <!-- Load and execute javascript code used only in this page -->
-        <script src="<?php echo base_url();?>assets/js/pages/readyInbox.js"></script>
-        <script>
-            ReadyInbox.init();
-        </script>
-
-        <script type="text/javascript">
-           
-
-            $('#taula').delegate('tr','click',function() {
-                //alert($("#id_polla").val());
-                var id = $("#id_polla").val();
-                alert(id);
-            });
-        </script>
-
-
+        <script src="js/pages/readyInboxCompose.js"></script>
+        <script>$(function(){ ReadyInboxCompose.init(); });</script>
     </body>
 </html>

@@ -12,6 +12,8 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+        <!-- Icons -->
+        <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
         <?php include('imports.php');?>
     </head>
     <body>
@@ -68,190 +70,9 @@
             -->
             <div id="page-container" class="sidebar-partial sidebar-visible-lg sidebar-no-animations">
                 <!-- Alternative Sidebar -->
-                <div id="sidebar-alt">
-                    <!-- Wrapper for scrolling functionality -->
-                    <div id="sidebar-alt-scroll">
-                        <!-- Sidebar Content -->
-                        <div class="sidebar-content">
-                            <!-- Chat -->
-                            <!-- Chat demo functionality initialized in js/app.js -> chatUi() -->
-                            <a href="page_ready_chat.html" class="sidebar-title">
-                                <i class="gi gi-comments pull-right"></i> <strong>Chat</strong>UI
-                            </a>
-                            <!-- Chat Users -->
-                            <ul class="chat-users clearfix">
-                                <li>
-                                    <a href="javascript:void(0)" class="chat-user-online">
-                                        <span></span>
-                                        <img src="img/placeholders/avatars/avatar12.jpg" alt="avatar" class="img-circle">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="chat-user-online">
-                                        <span></span>
-                                        <img src="img/placeholders/avatars/avatar15.jpg" alt="avatar" class="img-circle">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="chat-user-online">
-                                        <span></span>
-                                        <img src="img/placeholders/avatars/avatar10.jpg" alt="avatar" class="img-circle">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="chat-user-online">
-                                        <span></span>
-                                        <img src="img/placeholders/avatars/avatar4.jpg" alt="avatar" class="img-circle">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="chat-user-away">
-                                        <span></span>
-                                        <img src="img/placeholders/avatars/avatar7.jpg" alt="avatar" class="img-circle">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="chat-user-away">
-                                        <span></span>
-                                        <img src="img/placeholders/avatars/avatar9.jpg" alt="avatar" class="img-circle">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="chat-user-busy">
-                                        <span></span>
-                                        <img src="img/placeholders/avatars/avatar16.jpg" alt="avatar" class="img-circle">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <span></span>
-                                        <img src="img/placeholders/avatars/avatar1.jpg" alt="avatar" class="img-circle">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <span></span>
-                                        <img src="img/placeholders/avatars/avatar4.jpg" alt="avatar" class="img-circle">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <span></span>
-                                        <img src="img/placeholders/avatars/avatar3.jpg" alt="avatar" class="img-circle">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <span></span>
-                                        <img src="img/placeholders/avatars/avatar13.jpg" alt="avatar" class="img-circle">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <span></span>
-                                        <img src="img/placeholders/avatars/avatar5.jpg" alt="avatar" class="img-circle">
-                                    </a>
-                                </li>
-                            </ul>
-                            <!-- END Chat Users -->
-
-                            <!-- Chat Talk -->
-                            <div class="chat-talk display-none">
-                                <!-- Chat Info -->
-                                <div class="chat-talk-info sidebar-section">
-                                    <button id="chat-talk-close-btn" class="btn btn-xs btn-default pull-right">
-                                        <i class="fa fa-times"></i>
-                                    </button>
-                                    <img src="img/placeholders/avatars/avatar5.jpg" alt="avatar" class="img-circle pull-left">
-                                    <strong>John</strong> Doe
-                                </div>
-                                <!-- END Chat Info -->
-
-                                <!-- Chat Messages -->
-                                <ul class="chat-talk-messages">
-                                    <li class="text-center"><small>Yesterday, 18:35</small></li>
-                                    <li class="chat-talk-msg animation-slideRight">Hey admin?</li>
-                                    <li class="chat-talk-msg animation-slideRight">How are you?</li>
-                                    <li class="text-center"><small>Today, 7:10</small></li>
-                                    <li class="chat-talk-msg chat-talk-msg-highlight themed-border animation-slideLeft">I'm fine, thanks!</li>
-                                </ul>
-                                <!-- END Chat Messages -->
-
-                                <!-- Chat Input -->
-                                <form action="index.html" method="post" id="sidebar-chat-form" class="chat-form">
-                                    <input type="text" id="sidebar-chat-message" name="sidebar-chat-message" class="form-control form-control-borderless" placeholder="Type a message..">
-                                </form>
-                                <!-- END Chat Input -->
-                            </div>
-                            <!--  END Chat Talk -->
-                            <!-- END Chat -->
-
-                            <!-- Activity -->
-                            <a href="javascript:void(0)" class="sidebar-title">
-                                <i class="fa fa-globe pull-right"></i> <strong>Activity</strong>UI
-                            </a>
-                            <div class="sidebar-section">
-                                <div class="alert alert-danger alert-alt">
-                                    <small>just now</small><br>
-                                    <i class="fa fa-thumbs-up fa-fw"></i> Upgraded to Pro plan
-                                </div>
-                                <div class="alert alert-info alert-alt">
-                                    <small>2 hours ago</small><br>
-                                    <i class="gi gi-coins fa-fw"></i> You had a new sale!
-                                </div>
-                                <div class="alert alert-success alert-alt">
-                                    <small>3 hours ago</small><br>
-                                    <i class="fa fa-plus fa-fw"></i> <a href="page_ready_user_profile.html"><strong>John Doe</strong></a> would like to become friends!<br>
-                                    <a href="javascript:void(0)" class="btn btn-xs btn-primary"><i class="fa fa-check"></i> Accept</a>
-                                    <a href="javascript:void(0)" class="btn btn-xs btn-default"><i class="fa fa-times"></i> Ignore</a>
-                                </div>
-                                <div class="alert alert-warning alert-alt">
-                                    <small>2 days ago</small><br>
-                                    Running low on space<br><strong>18GB in use</strong> 2GB left<br>
-                                    <a href="page_ready_pricing_tables.html" class="btn btn-xs btn-primary"><i class="fa fa-arrow-up"></i> Upgrade Plan</a>
-                                </div>
-                            </div>
-                            <!-- END Activity -->
-
-                            <!-- Messages -->
-                            <a href="page_ready_inbox.html" class="sidebar-title">
-                                <i class="fa fa-envelope pull-right"></i> <strong>Messages</strong>UI (5)
-                            </a>
-                            <div class="sidebar-section">
-                                <div class="alert alert-alt">
-                                    Debra Stanley<small class="pull-right">just now</small><br>
-                                    <a href="page_ready_inbox_message.html"><strong>New Follower</strong></a>
-                                </div>
-                                <div class="alert alert-alt">
-                                    Sarah Cole<small class="pull-right">2 min ago</small><br>
-                                    <a href="page_ready_inbox_message.html"><strong>Your subscription was updated</strong></a>
-                                </div>
-                                <div class="alert alert-alt">
-                                    Bryan Porter<small class="pull-right">10 min ago</small><br>
-                                    <a href="page_ready_inbox_message.html"><strong>A great opportunity</strong></a>
-                                </div>
-                                <div class="alert alert-alt">
-                                    Jose Duncan<small class="pull-right">30 min ago</small><br>
-                                    <a href="page_ready_inbox_message.html"><strong>Account Activation</strong></a>
-                                </div>
-                                <div class="alert alert-alt">
-                                    Henry Ellis<small class="pull-right">40 min ago</small><br>
-                                    <a href="page_ready_inbox_message.html"><strong>You reached 10.000 Followers!</strong></a>
-                                </div>
-                            </div>
-                            <!-- END Messages -->
-                        </div>
-                        <!-- END Sidebar Content -->
-                    </div>
-                    <!-- END Wrapper for scrolling functionality -->
-                </div>
-                <!-- END Alternative Sidebar -->
-
-                <!-- Main Sidebar -->
                 
-                            <?php include('menu.php');?>
-                           
-
+                <!-- END Main Sidebar -->
+                <?php include('menu.php');?>
                 <!-- Main Container -->
                 <div id="main-container">
                     <!-- Header -->
@@ -277,21 +98,53 @@
                                     <i class="fa fa-bars fa-fw"></i>
                                 </a>
                             </li>
-                           
+                            <!-- END Main Sidebar Toggle Button -->
+
+                            <!-- Template Options -->
+                            <!-- Change Options functionality can be found in js/app.js - templateOptions() -->
+                            
+                        </ul>
+                        <!-- END Left Header Navigation -->
+
+                        <!-- Search Form -->
+                        
                         <!-- END Right Header Navigation -->
                     </header>
                     <!-- END Header -->
 
                     <!-- Page content -->
                     <div id="page-content">
-                        <!-- Quick Stats -->
-                       
-                        <div class="block full">
-                            <!-- All Products Title -->
-                           <div class="row">
-                                <div class="col-sm-6 col-sm-offset-1">
-                                    <div class="block-section">
-                                         <form id="form-validation" action="insertarUsuarios" method="post" class="form-horizontal form-bordered">
+                        <!-- Search Results Header -->
+                        <div class="content-header">
+                            <div class="header-section">
+                                <h1>
+                                    <i class="gi gi-search"></i>Search Results<br><small>UI for Projects, Images, Users and Classic search results!</small>
+                                </h1>
+                            </div>
+                        </div>
+                        <ul class="breadcrumb breadcrumb-top">
+                            <li>Pages</li>
+                            <li><a href="">Search Results</a></li>
+                        </ul>
+                        <!-- END Search Results Header -->
+
+                        <!-- Search Styles Block -->
+                        <div class="block">
+                            <!-- Search Styles Title -->
+                            <div class="block-title">
+                                <ul class="nav nav-tabs" data-toggle="tabs">
+                                    <li class="active"><a href="#informacion">Información</a></li>
+                                    <li><a href="#foro">Foro</a></li>
+                                    <li><a href="#tareas">Tareas</a></li>
+                                </ul>
+                            </div>
+                            <!-- END Search Styles Title -->
+
+                            <!-- Search Styles Content -->
+                            <div class="tab-content">
+                                <!-- Projects Search -->
+                                <div class="tab-pane active" id="informacion">
+                                 <form id="form-validation" action="insertarUsuarios" method="post" class="form-horizontal form-bordered">
                                         <fieldset>
                                             <legend><i class="fa fa-angle-right"></i>Modificar Asignatura</legend>
                                              <div class="form-group">
@@ -335,7 +188,7 @@
                                             </div>
                                             </div>
                                              
-                                        </fieldset>
+                                        
                                          <div class="form-group form-actions">
                                             <div class="col-md-8 col-md-offset-4">
                                                 <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-arrow-right"></i> Aceptar</button>
@@ -343,14 +196,7 @@
                                             </div>
                                         </div>
                                         </form>
-                                        </div>
-                                </div>
-                            <!-- END All Products Content -->
-                        </div>
-                        <!-- END All Products Block -->
-
-                        <!-- All Products Block -->
-                        <div class="block full">
+                                        <div class="block full">
                             <!-- All Products Title -->
                             <div class="block-title">
                                 <div class="block-options pull-right">
@@ -385,7 +231,344 @@
                             </table>
                             <!-- END All Products Content -->
                         </div>
-                        <!-- END All Products Block -->
+                                 
+                                </div>
+                                <!-- END Projects Search -->
+
+                                <!-- Images Search -->
+                                <div class="tab-pane" id="foro">
+                                    <!-- Search Info - Pagination -->
+                                    <div class="block-section clearfix">
+                                        <ul class="pagination remove-margin pull-right">
+                                            <li class="disabled"><a href="javascript:void(0)"><i class="fa fa-chevron-left"></i></a></li>
+                                            <li class="active"><a href="javascript:void(0)">1</a></li>
+                                            <li><a href="javascript:void(0)">2</a></li>
+                                            <li><a href="javascript:void(0)"><i class="fa fa-chevron-right"></i></a></li>
+                                        </ul>
+                                        <ul class="pagination remove-margin">
+                                            <li class="active"><span><strong>28</strong> Results</span></li>
+                                        </ul>
+                                    </div>
+                                    <!-- END Search Info - Pagination -->
+
+                                    <!-- Images Results -->
+                                    <div class="gallery" data-toggle="lightbox-gallery">
+                                        <div class="row">
+                                            <div class="col-sm-3 gallery-image">
+                                                <img src="img/placeholders/photos/photo15.jpg" alt="image">
+                                                <div class="gallery-image-options text-center">
+                                                    <div class="btn-group btn-group-sm">
+                                                        <a href="img/placeholders/photos/photo15.jpg" class="gallery-link btn btn-sm btn-alt btn-default" title="Image Info">View</a>
+                                                        <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3 gallery-image">
+                                                <img src="img/placeholders/photos/photo10.jpg" alt="image">
+                                                <div class="gallery-image-options text-center">
+                                                    <div class="btn-group btn-group-sm">
+                                                        <a href="img/placeholders/photos/photo10.jpg" class="gallery-link btn btn-sm btn-alt btn-default" title="Image Info">View</a>
+                                                        <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3 gallery-image">
+                                                <img src="img/placeholders/photos/photo11.jpg" alt="image">
+                                                <div class="gallery-image-options text-center">
+                                                    <div class="btn-group btn-group-sm">
+                                                        <a href="img/placeholders/photos/photo11.jpg" class="gallery-link btn btn-sm btn-alt btn-default" title="Image Info">View</a>
+                                                        <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3 gallery-image">
+                                                <img src="img/placeholders/photos/photo12.jpg" alt="image">
+                                                <div class="gallery-image-options text-center">
+                                                    <div class="btn-group btn-group-sm">
+                                                        <a href="img/placeholders/photos/photo12.jpg" class="gallery-link btn btn-sm btn-alt btn-default" title="Image Info">View</a>
+                                                        <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 gallery-image">
+                                                <img src="img/placeholders/photos/photo13.jpg" alt="image">
+                                                <div class="gallery-image-options text-center">
+                                                    <div class="btn-group btn-group-sm">
+                                                        <a href="img/placeholders/photos/photo13.jpg" class="gallery-link btn btn-sm btn-alt btn-default" title="Image Info">View</a>
+                                                        <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 gallery-image">
+                                                <img src="img/placeholders/photos/photo14.jpg" alt="image">
+                                                <div class="gallery-image-options text-center">
+                                                    <div class="btn-group btn-group-sm">
+                                                        <a href="img/placeholders/photos/photo14.jpg" class="gallery-link btn btn-sm btn-alt btn-default" title="Image Info">View</a>
+                                                        <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 gallery-image">
+                                                <img src="img/placeholders/photos/photo15.jpg" alt="image">
+                                                <div class="gallery-image-options text-center">
+                                                    <div class="btn-group btn-group-sm">
+                                                        <a href="img/placeholders/photos/photo15.jpg" class="gallery-link btn btn-sm btn-alt btn-default" title="Image Info">View</a>
+                                                        <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3 gallery-image">
+                                                <img src="img/placeholders/photos/photo5.jpg" alt="image">
+                                                <div class="gallery-image-options text-center">
+                                                    <div class="btn-group btn-group-sm">
+                                                        <a href="img/placeholders/photos/photo5.jpg" class="gallery-link btn btn-sm btn-alt btn-default" title="Image Info">View</a>
+                                                        <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3 gallery-image">
+                                                <img src="img/placeholders/photos/photo16.jpg" alt="image">
+                                                <div class="gallery-image-options text-center">
+                                                    <div class="btn-group btn-group-sm">
+                                                        <a href="img/placeholders/photos/photo16.jpg" class="gallery-link btn btn-sm btn-alt btn-default" title="Image Info">View</a>
+                                                        <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3 gallery-image">
+                                                <img src="img/placeholders/photos/photo17.jpg" alt="image">
+                                                <div class="gallery-image-options text-center">
+                                                    <div class="btn-group btn-group-sm">
+                                                        <a href="img/placeholders/photos/photo17.jpg" class="gallery-link btn btn-sm btn-alt btn-default" title="Image Info">View</a>
+                                                        <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3 gallery-image">
+                                                <img src="img/placeholders/photos/photo18.jpg" alt="image">
+                                                <div class="gallery-image-options text-center">
+                                                    <div class="btn-group btn-group-sm">
+                                                        <a href="img/placeholders/photos/photo18.jpg" class="gallery-link btn btn-sm btn-alt btn-default" title="Image Info">View</a>
+                                                        <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 gallery-image">
+                                                <img src="img/placeholders/photos/photo22.jpg" alt="image">
+                                                <div class="gallery-image-options text-center">
+                                                    <div class="btn-group btn-group-sm">
+                                                        <a href="img/placeholders/photos/photo22.jpg" class="gallery-link btn btn-sm btn-alt btn-default" title="Image Info">View</a>
+                                                        <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 gallery-image">
+                                                <img src="img/placeholders/photos/photo3.jpg" alt="image">
+                                                <div class="gallery-image-options text-center">
+                                                    <div class="btn-group btn-group-sm">
+                                                        <a href="img/placeholders/photos/photo3.jpg" class="gallery-link btn btn-sm btn-alt btn-default" title="Image Info">View</a>
+                                                        <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 gallery-image">
+                                                <img src="img/placeholders/photos/photo1.jpg" alt="image">
+                                                <div class="gallery-image-options text-center">
+                                                    <div class="btn-group btn-group-sm">
+                                                        <a href="img/placeholders/photos/photo1.jpg" class="gallery-link btn btn-sm btn-alt btn-default" title="Image Info">View</a>
+                                                        <a href="javascript:void(0)" class="btn btn-sm btn-alt btn-default" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END Images Results -->
+
+                                    <!-- Bottom Navigation -->
+                                    <div class="block-section text-right">
+                                        <ul class="pagination remove-margin">
+                                            <li class="disabled"><a href="javascript:void(0)"><i class="fa fa-chevron-left"></i></a></li>
+                                            <li class="active"><a href="javascript:void(0)">1</a></li>
+                                            <li><a href="javascript:void(0)">2</a></li>
+                                            <li><a href="javascript:void(0)"><i class="fa fa-chevron-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- END Bottom Navigation -->
+                                </div>
+                                <!-- END Images Search -->
+
+                                <!-- Users Search -->
+                                <div class="tab-pane" id="tareas">
+                                    <!-- Search Info - Pagination -->
+                                    <div class="block-section clearfix">
+                                        <ul class="pagination remove-margin pull-right">
+                                            <li class="disabled"><a href="javascript:void(0)"><i class="fa fa-chevron-left"></i></a></li>
+                                            <li class="active"><a href="javascript:void(0)">1</a></li>
+                                            <li><a href="javascript:void(0)">2</a></li>
+                                            <li><a href="javascript:void(0)">3</a></li>
+                                            <li><a href="javascript:void(0)"><i class="fa fa-chevron-right"></i></a></li>
+                                        </ul>
+                                        <ul class="pagination remove-margin">
+                                            <li class="active"><span><strong>30</strong> Results</span></li>
+                                        </ul>
+                                    </div>
+                                    <!-- END Search Info - Pagination -->
+
+                                    <!-- Users Results -->
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-vcenter">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width: 150px;" class="text-center"><i class="gi gi-user"></i></th>
+                                                    <th>Username</th>
+                                                    <th>Email</th>
+                                                    <th>Subscription</th>
+                                                    <th style="width: 150px;" class="text-center">Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center"><img src="img/placeholders/avatars/avatar15.jpg" alt="avatar" class="img-circle"></td>
+                                                    <td><a href="page_ready_user_profile.html">user1</a></td>
+                                                    <td>user1@example.com</td>
+                                                    <td><a href="javascript:void(0)" class="label label-warning">Trial</a></td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-default"><i class="fa fa-pencil"></i></a>
+                                                            <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-default"><i class="fa fa-times"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><img src="img/placeholders/avatars/avatar16.jpg" alt="avatar" class="img-circle"></td>
+                                                    <td><a href="page_ready_user_profile.html">user2</a></td>
+                                                    <td>user2@example.com</td>
+                                                    <td><a href="javascript:void(0)" class="label label-success">VIP</a></td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-default"><i class="fa fa-pencil"></i></a>
+                                                            <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-default"><i class="fa fa-times"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><img src="img/placeholders/avatars/avatar9.jpg" alt="avatar" class="img-circle"></td>
+                                                    <td><a href="page_ready_user_profile.html">user3</a></td>
+                                                    <td>user3@example.com</td>
+                                                    <td><a href="javascript:void(0)" class="label label-info">Business</a></td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-default"><i class="fa fa-pencil"></i></a>
+                                                            <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-default"><i class="fa fa-times"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><img src="img/placeholders/avatars/avatar7.jpg" alt="avatar" class="img-circle"></td>
+                                                    <td><a href="page_ready_user_profile.html">user4</a></td>
+                                                    <td>user4@example.com</td>
+                                                    <td><a href="javascript:void(0)" class="label label-success">VIP</a></td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-default"><i class="fa fa-pencil"></i></a>
+                                                            <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-default"><i class="fa fa-times"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><img src="img/placeholders/avatars/avatar10.jpg" alt="avatar" class="img-circle"></td>
+                                                    <td><a href="page_ready_user_profile.html">user5</a></td>
+                                                    <td>user5@example.com</td>
+                                                    <td><a href="javascript:void(0)" class="label label-primary">Personal</a></td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-default"><i class="fa fa-pencil"></i></a>
+                                                            <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-default"><i class="fa fa-times"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><img src="img/placeholders/avatars/avatar14.jpg" alt="avatar" class="img-circle"></td>
+                                                    <td><a href="page_ready_user_profile.html">user6</a></td>
+                                                    <td>user6@example.com</td>
+                                                    <td><a href="javascript:void(0)" class="label label-info">Business</a></td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-default"><i class="fa fa-pencil"></i></a>
+                                                            <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-default"><i class="fa fa-times"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><img src="img/placeholders/avatars/avatar11.jpg" alt="avatar" class="img-circle"></td>
+                                                    <td><a href="page_ready_user_profile.html">user7</a></td>
+                                                    <td>user7@example.com</td>
+                                                    <td><a href="javascript:void(0)" class="label label-warning">Trial</a></td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-default"><i class="fa fa-pencil"></i></a>
+                                                            <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-default"><i class="fa fa-times"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><img src="img/placeholders/avatars/avatar13.jpg" alt="avatar" class="img-circle"></td>
+                                                    <td><a href="page_ready_user_profile.html">user8</a></td>
+                                                    <td>user8@example.com</td>
+                                                    <td><a href="javascript:void(0)" class="label label-primary">Personal</a></td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-default"><i class="fa fa-pencil"></i></a>
+                                                            <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-default"><i class="fa fa-times"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><img src="img/placeholders/avatars/avatar10.jpg" alt="avatar" class="img-circle"></td>
+                                                    <td><a href="page_ready_user_profile.html">user9</a></td>
+                                                    <td>user9@example.com</td>
+                                                    <td><a href="javascript:void(0)" class="label label-success">VIP</a></td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-default"><i class="fa fa-pencil"></i></a>
+                                                            <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-default"><i class="fa fa-times"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><img src="img/placeholders/avatars/avatar16.jpg" alt="avatar" class="img-circle"></td>
+                                                    <td><a href="page_ready_user_profile.html">user10</a></td>
+                                                    <td>user10@example.com</td>
+                                                    <td><a href="javascript:void(0)" class="label label-info">Business</a></td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="javascript:void(0)" data-toggle="tooltip" title="Edit" class="btn btn-default"><i class="fa fa-pencil"></i></a>
+                                                            <a href="javascript:void(0)" data-toggle="tooltip" title="Delete" class="btn btn-default"><i class="fa fa-times"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- END Users Results -->
+
+                                    <!-- Bottom Navigation -->
+                                    <div class="block-section text-right">
+                                        <ul class="pagination remove-margin">
+                                            <li class="disabled"><a href="javascript:void(0)"><i class="fa fa-chevron-left"></i></a></li>
+                                            <li class="active"><a href="javascript:void(0)">1</a></li>
+                                            <li><a href="javascript:void(0)">2</a></li>
+                                            <li><a href="javascript:void(0)">3</a></li>
+                                            <li><a href="javascript:void(0)"><i class="fa fa-chevron-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- END Bottom Navigation -->
+                                </div>
+                                <!-- END Users Search -->
+                            </div>
+                            <!-- END Search Styles Content -->
+                        </div>
+                        <!-- END Search Styles Block -->
                     </div>
                     <!-- END Page Content -->
 
@@ -470,101 +653,12 @@
                         </form>
                     </div>
                     <!-- END Modal Body -->
-
-                    
                 </div>
             </div>
         </div>
         <!-- END User Settings -->
 
-        <!-- Modal para insertar datos  -->
-       <div id="modal-insertar" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <!-- Modal Header -->
-                    <div class="modal-header text-center">
-                        <h2 class="modal-title"><i class="fa fa-pencil"></i> Crear Asignatura</h2>
-                    </div>
-                    <!-- END Modal Header -->
-
-                    <!-- Modal Body -->
-                    <div class="modal-body">
-                        <form action="asignaturas/insertarAsignaturas" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered">
-                            <fieldset>
-                                <legend></legend>
-                                <div class="form-group">
-                                    <label class="col-md-4 control-label" for="Asignatura">Asignatura<span class="text-danger">*</span></label>
-                                        <div class="col-md-6">
-                                            <div class="input-group">
-                                                <input type="text" id="Asignatura" name="Asignatura" class="form-control" placeholder="Introduce una asignatura">
-                                                
-                                            </div>
-                                        </div>
-                                </div>
-                            </fieldset>
-                            <div class="form-group form-actions">
-                                <div class="col-xs-12 text-right">
-                                    <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Cancelar</button>
-                                    <button type="submit" class="btn btn-sm btn-primary">Aceptar</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- END Modal Body -->
-                    
-                    
-                </div>
-            </div>
-        </div>
-        <!-- END del Modal para insertar -->
-         <div id="modal-agrupar" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <!-- Modal Header -->
-                    <div class="modal-header text-center">
-                        <h2 class="modal-title"><i class="fa fa-pencil"></i>Insertar alumnos</h2>
-                    </div>
-                    <!-- END Modal Header -->
-
-                    <!-- Modal Body -->
-                    <div class="modal-body">
-                        <form action="asignaturas/insertarAAsigntauras" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered">
-                            <fieldset>
-                                <div class="form-group">
-                                                <input type = "hidden" name = "valor_id" id="valor_id"/>
-                                                <label class="col-md-4 control-label" for="a-alumnos">Insertar alumnos</label>
-                                                <div class="col-md-6">
-                                                    <select id="a-alumnos" name="a-alumnos[]" class="select-chosen" data-placeholder="Selecciona los usuarios" style="width: 250px;" multiple>
-                                                    <?php foreach($usuario as $llistarusuarios){ ?>
-                                                        <option value="<?php echo $llistarusuarios['id_usuario']; ?>"><?php echo $llistarusuarios['Nombre']; ?> <?php echo $llistarusuarios['Apellidos']; ?></option>
-
-                                                   <?php } ?>
-                                                        
-                                                    </select>
-                                                </div>
-                                            </div>
-                            </fieldset>
-                            <div class="form-group form-actions">
-                                <div class="col-xs-12 text-right">
-                                    <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Cancelar</button>
-                                    <button type="submit" class="btn btn-sm btn-primary">Aceptar</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- END Modal Body -->
-                    
-                    
-                </div>
-            </div>
-        </div>
-
-       
+        <!-- jQuery, Bootstrap.js, jQuery plugins and Custom JS code -->
+   
     </body>
-
-    <script type="text/javascript" language="javascript">
-            function editar(id) {
-             document.getElementById("valor_id").value = id;
-            }
-        </script>
 </html>

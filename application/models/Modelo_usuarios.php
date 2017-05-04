@@ -34,6 +34,13 @@ class Modelo_usuarios extends CI_Model{
         return $query->result_array();
     }
 
+    function getAllUsers() {
+        $this->db->select('Nombre, Apellidos , Email');
+        $this->db->from('Usuarios');
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
 
     
     function completarDades($id, $nombre, $apellidos, $email, $fechanacimiento, $password) {
